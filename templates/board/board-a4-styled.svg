@@ -1,0 +1,11 @@
+# board-a4-styled-flat.svg
+
+Aktuell huvudvariant:
+- `output/preview/board-a4-v0.6.2-styled-flat.svg`
+- `output/print/board/board-a4-v0.6.2-styled-flat.svg`
+
+v0.6.2:
+- högerspalten innehåller bara mörkerspåret
+- rutan `Se A6-kortet` är borttagen
+- spelplanen är ytterligare något större
+- fortsatt flat SVG för bättre kompatibilitet

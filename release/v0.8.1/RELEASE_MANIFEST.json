@@ -1,0 +1,42 @@
+{
+  "release": "v0.8.1",
+  "purpose": "Ren release-struktur med aktuella printfiler separat från källfiler.",
+  "print_files": {
+    "pdf": [
+      "print/pdf/board-a4.pdf",
+      "print/pdf/reference-card-a6.pdf",
+      "print/pdf/reference-card-a4-4up.pdf",
+      "print/pdf/fyndkort-a4-4x4.pdf",
+      "print/pdf/hotkort-a4-4x4.pdf"
+    ],
+    "svg": [
+      "print/svg/board-a4.svg",
+      "print/svg/reference-card-a6.svg",
+      "print/svg/reference-card-a4-4up.svg",
+      "print/svg/fyndkort-a4-4x4.svg",
+      "print/svg/hotkort-a4-4x4.svg"
+    ]
+  },
+  "source_of_truth": {
+    "rules": "data/rules.yaml",
+    "board": "data/board.yaml",
+    "cards": "data/cards.yaml",
+    "reference_card": "data/reference-card.yaml",
+    "visual_style": "data/visual-style.yaml",
+    "board_and_print_renderer": "scripts/render_styled_printables.py",
+    "balance_simulator": "scripts/simulate_manual_like.py"
+  },
+  "standard_simulation_command": "python scripts/simulate_manual_like.py --games 5000 --players 2 3 4 --food-policy save --ruin-policy situational",
+  "notes": [
+    "release/v0.8.0/print är avsett för direkt utskrift.",
+    "output/ behåller bara aktuella rekommenderade genererade filer.",
+    "docs/archive innehåller äldre historik och ska inte vara primär källa.",
+    "PDF-versioner av alla aktuella A4/A6-utskrifter finns i release/v0.8.0/print/pdf.",
+    "Fynd- och hotkort uppdaterade till ink-friendly styled variant.",
+    "Dekorativa cirklar längst ned på korten är borttagna.",
+    "PDF-versionerna av kortarken är regenererade från uppdaterade SVG-filer.",
+    "A6-referenskort uppdaterat till ink-friendly styled variant.",
+    "Spelplan uppdaterad till ink-friendly light variant.",
+    "PDF-versionerna för A6, A6 4-up och spelplan regenererade."
+  ]
+}

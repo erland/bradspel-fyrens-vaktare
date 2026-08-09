@@ -1,0 +1,99 @@
+{
+  "project": "Fyrens väktare",
+  "handoff_version": "v0.8.5",
+  "recommended_base_zip": "fyrens-vaktare-v0.8.5-rulebook-no-version.zip",
+  "ruleset": "REGLERV4-STARTBALANS",
+  "current_standard_simulation": {
+    "script": "scripts/simulate_manual_like.py",
+    "command": "python scripts/simulate_manual_like.py --games 5000 --players 2 3 4 --food-policy save --ruin-policy situational",
+    "food_policy": "save",
+    "ruin_policy": "situational",
+    "baseline_win_rates": {
+      "2p": "ca 28.8%",
+      "3p": "ca 44.3%",
+      "4p": "ca 54.1%"
+    }
+  },
+  "current_balance": {
+    "darkness": {
+      "2p": 10,
+      "3p": 10,
+      "4p": 10
+    },
+    "base_food": {
+      "2p": 6,
+      "3p": 4,
+      "4p": 4
+    },
+    "build_costs": {
+      "Grund": {
+        "sten": 3
+      },
+      "Torn": {
+        "trä": 3,
+        "sten": 2
+      },
+      "Ljuskärna": {
+        "kristall": 2
+      }
+    }
+  },
+  "board_layout": [
+    [
+      "Skog",
+      "Skog",
+      "Ruin",
+      "Berg",
+      "Grotta"
+    ],
+    [
+      "Bas",
+      "Stig",
+      "Fyrplats",
+      "Stig",
+      "Grotta"
+    ],
+    [
+      "Stig",
+      "Äng",
+      "Stig",
+      "Berg",
+      "Stig"
+    ],
+    [
+      "Äng",
+      "Ruin",
+      "Äng",
+      "Stig",
+      "Skog"
+    ]
+  ],
+  "important_files": {
+    "handoff": "docs/NEW_CHAT_HANDOFF.md",
+    "rules": "data/rules.yaml",
+    "board": "data/board.yaml",
+    "cards": "data/cards.yaml",
+    "style": "data/visual-style.yaml",
+    "renderer": "scripts/render_styled_printables.py",
+    "simulator": "scripts/simulate_manual_like.py",
+    "a6": "output/print/reference/reference-card-a6-REGLERV4-STARTBALANS-v0.7.5-styled.svg",
+    "a4_reference_4up": "output/print/reference/reference-card-a4-4up-REGLERV4-STARTBALANS-v0.7.5-styled.svg",
+    "board_styled": "output/print/board/board-a4-REGLERV4-STARTBALANS-v0.7.2-styled.svg",
+    "fynd_cards": "output/print/cards/fyndkort-a4-4x4-v0.7.3-styled.svg",
+    "hot_cards": "output/print/cards/hotkort-a4-4x4-v0.7.3-styled.svg",
+    "rulebook_pdf": "release/v0.8.2/docs/rulebook.pdf",
+    "rulebook_analysis": "docs/rulebook-clarity-analysis-v0.8.3.md"
+  },
+  "notes": [
+    "Äldre genererade filer i output/ har rensats bort; behåll endast aktuell rekommenderad output.",
+    "Äldre dokument har flyttats till docs/archive och aktuell release finns i release/v0.8.0.",
+    "Release-mappen innehåller nu både SVG och PDF för aktuell utskrift.",
+    "Nuvarande rekommenderade kortark är ink-friendly styled-varianten i release/v0.8.0.",
+    "Aktuell rekommenderad release är v0.8.1 med ink-friendly A6-kort och spelplan.",
+    "Regelboken finns som Pandoc-genererad PDF i release/v0.8.2/docs/rulebook.pdf.",
+    "Regelboken är uppdaterad i v0.8.3: ingen TOC/kapitelnumrering, tydligare story och begrepp.",
+    "Regelboken är rensad från prototyp- och utskriftsavsnitt i v0.8.4.",
+    "Regelboken saknar synlig versionsrad i v0.8.5."
+  ],
+  "release": "release/v0.8.5"
+}

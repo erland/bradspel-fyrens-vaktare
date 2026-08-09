@@ -1,0 +1,46 @@
+variant: ink-friendly
+description: >
+  Toner-snål styled-variant för hemmautskrift. Behåller struktur,
+  ikonografi och färgkodning men använder vitare bakgrunder och ljusare
+  rubrikfält.
+targets:
+  cards:
+    status: already_applied_in_v0_8_0
+    notes:
+      - Vit huvudyta
+      - Dekorativa bottenelement borttagna
+  reference_card:
+    page_background: "#ffffff"
+    outer_panel_fill: "#fffdf8"
+    title_bar_fill: "#ede6da"
+    title_text_fill: "#2d261d"
+    subtitle_text_fill: "#6b6257"
+    body_fill: "#ffffff"
+    section_header_fills:
+      start: "#f4e3b8"
+      night: "#ece8f3"
+      places: "#e4efd8"
+      food: "#ddeee8"
+      base: "#f5ebc8"
+      lighthouse: "#f6e7c9"
+      actions: "#ece8f8"
+    header_text_fill: "#2d261d"
+  board:
+    page_background: "#ffffff"
+    outer_panel_fill: "#fffdf8"
+    title_bar_fill: "#ede6da"
+    title_text_fill: "#2d261d"
+    subtitle_text_fill: "#6b6257"
+    grid_panel_fill: "#ffffff"
+    tile_fill_adjustments:
+      skog: "#eef5e6"
+      stig: "#faf5df"
+      bas: "#f5efe8"
+      berg: "#f4f3ef"
+      ruin: "#fbf1ee"
+      grotta: "#faf7f2"
+      fyrplats: "#faf8ff"
+    principle:
+      - Använd vit basyta först
+      - Behåll färg i ramar, ikoner och små accenter
+      - Undvik stora mörka färgfält

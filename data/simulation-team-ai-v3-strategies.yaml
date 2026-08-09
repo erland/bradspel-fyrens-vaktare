@@ -1,0 +1,11 @@
+id: simulation_team_ai_v3_strategies
+game_title: "Fyrens väktare"
+version: "v0.7.0"
+
+strategies:
+  team_planner_v3:
+    description_sv: "Pragmatisk v3-jämförelsestrategi för kooperativ planering."
+  scripted_direct_build:
+    description_sv: "Rak kontrollstrategi: Grund, Torn, Ljuskärna utan sidospår."
+  delayed_crystal_v3:
+    description_sv: "Fördröjd kristalljakt som v3-jämförelse."

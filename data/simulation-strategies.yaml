@@ -1,0 +1,24 @@
+id: simulation_strategies_v0_7_0
+game_title: "Fyrens väktare"
+version: "v0.7.0"
+status: "Strategier för scripts/simulate_strategies.py"
+
+strategies:
+  balanced:
+    description_sv: "Försöker bygga nästa Fyrdel, tar kristaller när de behövs och använder Nattvakt först när Mörker är lågt."
+  safe_night:
+    description_sv: "Prioriterar mat i Basen och använder Nattvakt ofta."
+  action_food:
+    description_sv: "Använder medtagen mat offensivt för extra handlingar."
+  crystal_rush:
+    description_sv: "Prioriterar kristaller/grotta snabbare och accepterar fler hotkort."
+  ruin_focus:
+    description_sv: "Besöker Ruin oftare för att dra fyndkort."
+
+metrics:
+  - win_rate
+  - avg_days
+  - avg_darkness_end
+  - avg_built_parts
+  - avg_hot_draws
+  - avg_fynd_draws

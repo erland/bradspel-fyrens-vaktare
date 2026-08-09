@@ -1,0 +1,27 @@
+# card-sheet-4x4-styled.svg
+
+Detta är en konceptuell mallfil för v0.4.
+
+Den faktiska outputen genereras av:
+
+```text
+scripts/generate_card_sheets_svg.py
+```
+
+## Lager
+
+1. Bakgrund
+2. Diskret SVG-mönster
+3. Ram och hörndekor
+4. Rubrikfält
+5. Effektpanel
+6. Text
+7. Skärlinjer
+
+## Princip
+
+Mallen är data- och stilvariabelstyrd. Ändra inte output-SVG manuellt om samma ändring kan göras i:
+
+- `data/cards.yaml`
+- `data/card-styles.yaml`
+- `scripts/generate_card_sheets_svg.py`

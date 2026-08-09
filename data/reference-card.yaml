@@ -1,0 +1,53 @@
+id: reference_card_reglerv4_startbalans
+game_title: Fyrens väktare
+version: v0.7.0
+variant: REGLERV4 startbalans
+ruleset: REGLERV4-STARTBALANS
+format: A6 portrait
+status: A6-output med rekommenderad startbalans efter simulering, med fetstil före kolon och justerad Fyren-indragning
+sections:
+- title: Start
+  bullets:
+  - '2 spelare: 6 mat, Mörker 10'
+  - '3 spelare: 4 mat, Mörker 10'
+  - '4 spelare: 4 mat, Mörker 10'
+- title: Tur & handlingar
+  bullets:
+  - Fast turordning.
+  - 2 handlingar (3 om 1 medtagen mat används).
+  - 'Välj handlingar: Flytta, Utforska (se plats), Bygga (på Fyrplatsen).'
+  - 'Samma plats: byt resurser gratis.'
+- title: Mat
+  bullets:
+  - 'Medtagen mat: betala 1 för +1 handling.'
+  - 'Mat i basen: betala 1 för Nattvakt.'
+  - 'Kall natt: betala 1 mat från Basen.'
+- title: Basen
+  bullets:
+  - Lämna resurser gratis.
+  - Ta/lämna mat gratis.
+  - Basmat används till Nattvakt.
+- title: Nattfas
+  bullets:
+  - 1. Sänk Mörker eller betala 1 mat.
+  - 2. Dra 1 hotkort.
+  - Förlust om Mörker når 0.
+- title: Platser
+  bullets:
+  - 'Skog: 1 trä'
+  - 'Berg: 1 sten'
+  - 'Äng: 1 mat'
+  - 'Grotta: 1 sten eller 1 kristall + 1 hotkort'
+  - 'Ruin: 1 fyndkort'
+  - 'Stig: Flytta upp till 2 steg nästa handling'
+- title: Fyren
+  bullets:
+  - 'Fyren byggs på Fyrplatsen:'
+  - 'Grund: 3 sten'
+  - 'Torn: 3 trä + 2 sten'
+  - 'Ljuskärna: 2 kristaller'
+  - 'Vinst: bygg Fyren innan Mörker når 0'
+output_files:
+  a6_single: output/print/reference/reference-card-a6-REGLERV4-STARTBALANS-v0.7.0.svg
+  a4_4up: output/print/reference/reference-card-a4-4up-REGLERV4-STARTBALANS-v0.7.0.svg
+  preview: output/preview/reference-card-a6-REGLERV4-STARTBALANS-v0.7.0.svg

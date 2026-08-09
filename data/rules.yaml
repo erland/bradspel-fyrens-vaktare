@@ -1,0 +1,203 @@
+id: rules_reglerv4_startbalans
+game_title: Fyrens väktare
+version: v0.7.0
+ruleset: REGLERV4-STARTBALANS
+status: Strukturerad regelkälla för rekommenderad startbalans efter scriptade simuleringar
+language: sv
+objective:
+  win_sv: Bygg hela Fyren innan Mörker når 0.
+  win_when: Ljuskärnan byggs
+  loss_sv: Spelarna förlorar om Mörker når 0.
+  loss_when: Mörker når 0
+setup:
+  player_start_location: Bas
+  turn_order: fast
+  player_counts:
+    2:
+      start_food_in_base: 6
+      darkness_start: 10
+    3:
+      start_food_in_base: 4
+      darkness_start: 10
+    4:
+      start_food_in_base: 4
+      darkness_start: 10
+  decks:
+    fyndkort: blanda
+    hotkort: blanda
+turn:
+  actions_per_turn: 2
+  extra_action:
+    cost_sv: 1 medtagen mat
+    effect_sv: Få 1 extra handling den här turen.
+    limit_sv: Högst 1 gång per tur.
+  actions:
+  - move
+  - explore
+  - build
+actions:
+  move:
+    name_sv: Flytta
+    label_sv: Flytta
+    cost_actions: 1
+    available_where: var som helst
+    effect_sv: Flytta 1 steg till en angränsande ruta.
+    path_bonus:
+      location: Stig
+      condition_sv: Du står på Stig och din nästa handling är Flytta.
+      effect_sv: Flytta upp till 2 steg i stället för 1.
+      notes_sv:
+      - Du får stanna efter 1 steg.
+      - Bonusen gäller inte direkt när du går in på Stig.
+  explore:
+    name_sv: Utforska
+    label_sv: Utforska (se plats)
+    cost_actions: 1
+    available_where: nuvarande plats
+    effect_sv: Använd effekten på platsen där du står.
+    location_effects:
+      Skog: Få 1 trä.
+      Berg: Få 1 sten.
+      Äng: Få 1 mat.
+      Grotta: Välj 1 sten eller 1 kristall + 1 hotkort.
+      Ruin: Dra 1 fyndkort.
+      Stig: Ingen Utforska-effekt. Stig påverkar Flytta.
+      Bas: Ingen Utforska-effekt. Basen används för förråd och mat.
+      Fyrplats: Ingen Utforska-effekt. Fyrplatsen används för Bygga.
+  build:
+    name_sv: Bygga
+    label_sv: Bygga (på Fyrplatsen)
+    cost_actions: 1
+    available_where: Fyrplatsen
+    effect_sv: Bygg nästa del av Fyren om rätt resurser finns hos spelare på Fyrplatsen.
+    allowed_resource_sources:
+    - byggande spelares burna resurser
+    - andra spelares burna resurser på Fyrplatsen
+    not_allowed_resource_sources:
+    - Basens förråd på distans
+resources:
+  types:
+  - trä
+  - sten
+  - mat
+  - kristall
+  carrying_limit: null
+  food:
+    carried_food_use_sv: 1 medtagen mat kan betalas för +1 handling.
+    base_food_use_sv: Mat i Basen används till Nattvakt och Kall natt.
+  sharing_sv: När två eller fler spelare står på samma plats får de fritt ge resurser
+    till varandra. Det kostar ingen handling.
+base:
+  name_sv: Basen
+  effects_sv:
+  - Lämna resurser gratis.
+  - Ta/lämna mat gratis.
+  - Basmat används till Nattvakt och Kall natt.
+  build_allowed: false
+lighthouse:
+  build_location: Fyrplatsen
+  parts:
+  - id: foundation
+    name_sv: Grund
+    cost:
+      sten: 3
+  - id: tower
+    name_sv: Torn
+    cost:
+      trä: 3
+      sten: 2
+  - id: core
+    name_sv: Ljuskärna
+    cost:
+      kristall: 2
+    triggers_win: true
+darkness:
+  name_sv: Mörker
+  track_values:
+  - 10
+  - 9
+  - 8
+  - 7
+  - 6
+  - 5
+  - 4
+  - 3
+  - 2
+  - 1
+  - 0
+  direction: down
+  loss_at: 0
+  start_values:
+    players_2: 10
+    players_3: 10
+    players_4: 10
+  board_note_sv: Startvärden står på A6-kortet, inte på brädet.
+night_phase:
+  trigger_sv: När alla spelare har haft en tur.
+  steps:
+  - id: darkness_or_watch
+    order: 1
+    text_sv: Sänk Mörker 1 steg eller betala 1 mat från Basens förråd.
+    night_watch:
+      name_sv: Nattvakt
+      cost_sv: 1 mat från Basens förråd
+      effect_sv: Mörker sänks inte det vanliga steget den natten.
+  - id: draw_hotkort
+    order: 2
+    text_sv: Dra 1 hotkort och lös det.
+cards:
+  fyndkort:
+    timing_sv: Löses direkt när de dras.
+    discard_after_resolution: true
+    reshuffle_when_empty: true
+  hotkort:
+    timing_sv: Löses direkt när de dras.
+    discard_after_resolution: true
+    reshuffle_when_empty: true
+  key_synced_cards:
+    FYN-008:
+      name_sv: Starka verktyg
+      effect_sv: Få 1 valfri resurs utom kristall.
+    FYN-012:
+      name_sv: Morgonljus
+      effect_sv: Flytta Mörker 1 steg bort från 0. Den kan inte gå över startvärdet.
+    HOT-011:
+      name_sv: Oroligt läger
+      effect_sv: Nästa gång spelarna använder Nattvakt kostar det 2 mat i stället
+        för 1.
+source_of_truth:
+  human_rulebook: docs/rulebook.md
+  structured_rules: data/rules.yaml
+  cards: data/cards.yaml
+  board: data/board.yaml
+  reference_card: data/reference-card.yaml
+validation_notes:
+- Om handlingar ändras ska rulebook, rules.yaml, reference-card.yaml och cards.yaml
+  synkas.
+- Om Mörker ändras ska rules.yaml, board.yaml, A6 och FYN-012 synkas.
+- Om fyndkortens timing ändras ska FYN-008 kontrolleras.
+- Om bytesregeln ändras ska rulebook, quickstart och reference-card.yaml synkas.
+output_refs:
+  reference_card_a6: output/print/reference/reference-card-a6-REGLERV4-STARTBALANS-v0.7.0.svg
+  reference_card_a4_4up: output/print/reference/reference-card-a4-4up-REGLERV4-STARTBALANS-v0.7.0.svg
+  board_a4: output/print/board/board-a4-REGLERV4-STARTBALANS-v0.7.0.svg
+  fyndkort_sheet: output/print/cards/fyndkort-a4-3x4-v0.7.0-cardsync-1.svg
+  hotkort_sheet: output/print/cards/hotkort-a4-3x4-v0.7.0-cardsync-1.svg
+special_rules:
+  cold_night:
+    name_sv: Kall natt
+    source: hotkort
+    effect_sv: Betala 1 mat från Basens förråd. Om ni inte kan, sänk Mörker 1 extra
+      steg.
+    note_sv: Kall natt är separat från Nattvakt. Om båda sker samma natt krävs 2 mat
+      för att undvika båda effekterna.
+free_actions:
+  share_resources_same_location:
+    name_sv: Byta resurser
+    timing_sv: när två eller fler spelare står på samma plats
+    cost_actions: 0
+    effect_sv: När två eller fler spelare står på samma plats får de fritt ge resurser
+      till varandra. Det kostar ingen handling.
+    notes_sv:
+    - Gäller resurser som spelare bär.
+    - Mat i Basens förråd kan bara tas eller lämnas i Basen.

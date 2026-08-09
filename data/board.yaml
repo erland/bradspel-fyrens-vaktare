@@ -1,0 +1,82 @@
+id: board_main_reglerv4_startbalans
+game_title: Fyrens väktare
+version: v0.7.0
+variant: PLAN2 steg 3.1
+ruleset: REGLERV4-STARTBALANS
+format: A4 landscape
+status: Bräde med vertikalt Mörkerspår och platsrutor utan regeltext
+notes:
+- Startvärden för Mörker ligger på A6-referenskortet och i regelboken.
+- Brädet använder ett generiskt Mörkerspår från 10 till 0.
+- Mörkerspåret är vertikalt längst till höger.
+- Platsrutorna visar bara typ av ruta, inte vad som händer på rutan.
+- SVG-output är flat utan filter eller drop shadow.
+grid:
+  rows: 4
+  columns: 5
+  layout:
+  - - Skog
+    - Skog
+    - Ruin
+    - Berg
+    - Grotta
+  - - Bas
+    - Stig
+    - Fyrplats
+    - Stig
+    - Grotta
+  - - Stig
+    - Äng
+    - Stig
+    - Berg
+    - Stig
+  - - Äng
+    - Ruin
+    - Äng
+    - Stig
+    - Skog
+locations:
+  Skog:
+    label_sv: Skog
+    icon: ▲
+  Berg:
+    label_sv: Berg
+    icon: ▲▲
+  Äng:
+    label_sv: Äng
+    icon: ✿
+  Grotta:
+    label_sv: Grotta
+    icon: ◆
+  Ruin:
+    label_sv: Ruin
+    icon: ▣
+  Stig:
+    label_sv: Stig
+    icon: →
+  Bas:
+    label_sv: Bas
+    icon: ⌂
+  Fyrplats:
+    label_sv: Fyrplats
+    icon: ✦
+darkness_track:
+  label_sv: MÖRKER
+  orientation: vertical
+  values:
+  - 10
+  - 9
+  - 8
+  - 7
+  - 6
+  - 5
+  - 4
+  - 3
+  - 2
+  - 1
+  - 0
+  direction_sv: Räknar ned mot 0
+  start_values_on_reference_card: true
+output_files:
+  print: output/print/board/board-a4-REGLERV4-STARTBALANS-v0.7.0.svg
+  preview: output/preview/board-a4-REGLERV4-STARTBALANS-v0.7.0.svg

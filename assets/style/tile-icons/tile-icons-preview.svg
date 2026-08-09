@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="80mm" viewBox="0 0 210 80">
+<rect x="0" y="0" width="210" height="80" fill="#f2ead7"/>
+<text x="105" y="10" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#5b452b">Platstyp-ikoner – styled v0.7.1</text>
+<rect x="10" y="22" width="18" height="18" rx="3" fill="#fffaf0" stroke="#c9b187" stroke-width="0.5"/>
+<g transform="translate(12,24) scale(0.58)">
+
+        <rect x="5.00" y="5.00" width="14.00" height="14.00" rx="2.52" fill="#fff9ee" stroke="#6f8a4a" stroke-width="0.45"/>
+        <polygon points="12.00,6.68 8.08,11.72 15.92,11.72" fill="#6f8a4a"/>
+        <polygon points="12.00,9.20 7.52,15.08 16.48,15.08" fill="#6f8a4a"/>
+        <rect x="11.30" y="15.08" width="1.40" height="1.96" fill="#5b452b"/>
+        
+</g>
+<text x="19" y="46" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#2d261d">Skog</text>
+<rect x="34" y="22" width="18" height="18" rx="3" fill="#fffaf0" stroke="#c9b187" stroke-width="0.5"/>
+<g transform="translate(36,24) scale(0.58)">
+
+        <rect x="5.00" y="5.00" width="14.00" height="14.00" rx="2.52" fill="#fff9ee" stroke="#8c857a" stroke-width="0.45"/>
+        <polygon points="6.68,15.64 10.88,9.20 13.96,15.64" fill="#8c857a"/>
+        <polygon points="9.90,15.64 14.80,7.52 17.60,15.64" fill="#8c857a" opacity="0.9"/>
+        
+</g>
+<text x="43" y="46" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#2d261d">Berg</text>
+<rect x="58" y="22" width="18" height="18" rx="3" fill="#fffaf0" stroke="#c9b187" stroke-width="0.5"/>
+<g transform="translate(60,24) scale(0.58)">
+
+        <rect x="5.00" y="5.00" width="14.00" height="14.00" rx="2.52" fill="#fff9ee" stroke="#b79d48" stroke-width="0.45"/>
+        <circle cx="12.00" cy="11.86" r="1.12" fill="#b79d48"/>
+        <circle cx="12.00" cy="9.34" r="1.40" fill="#b79d48" opacity="0.95"/>
+        <circle cx="14.10" cy="10.60" r="1.40" fill="#b79d48" opacity="0.95"/>
+        <circle cx="13.68" cy="13.12" r="1.40" fill="#b79d48" opacity="0.95"/>
+        <circle cx="10.32" cy="13.12" r="1.40" fill="#b79d48" opacity="0.95"/>
+        <circle cx="9.90" cy="10.60" r="1.40" fill="#b79d48" opacity="0.95"/>
+        
+</g>
+<text x="67" y="46" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#2d261d">Äng</text>
+<rect x="82" y="22" width="18" height="18" rx="3" fill="#fffaf0" stroke="#c9b187" stroke-width="0.5"/>
+<g transform="translate(84,24) scale(0.58)">
+
+        <rect x="5.00" y="5.00" width="14.00" height="14.00" rx="2.52" fill="#fff9ee" stroke="#7e6b9f" stroke-width="0.45"/>
+        <path d="M 7.52 15.08 Q 8.08 9.48 12.00 7.80 Q 15.92 9.48 16.48 15.08 Z" fill="#7e6b9f"/>
+        <path d="M 10.04 15.08 Q 10.32 11.44 12.00 10.88 Q 13.68 11.44 13.96 15.08 Z" fill="#fff9ee"/>
+        
+</g>
+<text x="91" y="46" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#2d261d">Grotta</text>
+<rect x="106" y="22" width="18" height="18" rx="3" fill="#fffaf0" stroke="#c9b187" stroke-width="0.5"/>
+<g transform="translate(108,24) scale(0.58)">
+
+        <rect x="5.00" y="5.00" width="14.00" height="14.00" rx="2.52" fill="#fff9ee" stroke="#a38056" stroke-width="0.45"/>
+        <rect x="7.80" y="8.92" width="2.52" height="5.88" fill="#a38056"/>
+        <rect x="11.44" y="8.08" width="2.52" height="6.72" fill="#a38056"/>
+        <rect x="15.08" y="9.76" width="1.40" height="5.04" fill="#a38056"/>
+        <rect x="7.52" y="7.80" width="3.08" height="0.84" fill="#a38056"/>
+        <rect x="11.16" y="6.96" width="3.08" height="0.84" fill="#a38056"/>
+        
+</g>
+<text x="115" y="46" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#2d261d">Ruin</text>
+<rect x="130" y="22" width="18" height="18" rx="3" fill="#fffaf0" stroke="#c9b187" stroke-width="0.5"/>
+<g transform="translate(132,24) scale(0.58)">
+
+        <rect x="5.00" y="5.00" width="14.00" height="14.00" rx="2.52" fill="#fff9ee" stroke="#b28a5a" stroke-width="0.45"/>
+        <path d="M 7.52 14.24 C 8.92 12.28, 10.32 13.12, 11.44 10.88 C 12.84 7.80, 14.52 8.64, 15.92 7.52" fill="none" stroke="#b28a5a" stroke-width="1.40" stroke-linecap="round"/>
+        <circle cx="7.80" cy="14.24" r="0.84" fill="#b28a5a"/>
+        <circle cx="11.30" cy="11.16" r="0.70" fill="#b28a5a"/>
+        <circle cx="15.64" cy="7.80" r="0.84" fill="#b28a5a"/>
+        
+</g>
+<text x="139" y="46" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#2d261d">Stig</text>
+<rect x="154" y="22" width="18" height="18" rx="3" fill="#fffaf0" stroke="#c9b187" stroke-width="0.5"/>
+<g transform="translate(156,24) scale(0.58)">
+
+        <rect x="5.00" y="5.00" width="14.00" height="14.00" rx="2.52" fill="#fff9ee" stroke="#5e8d7e" stroke-width="0.45"/>
+        <polygon points="7.24,11.44 12.00,7.52 16.76,11.44" fill="#5e8d7e"/>
+        <rect x="8.36" y="11.44" width="7.28" height="4.20" fill="#5e8d7e"/>
+        <rect x="11.16" y="12.84" width="1.68" height="2.80" fill="#fff9ee"/>
+        
+</g>
+<text x="163" y="46" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#2d261d">Bas</text>
+<rect x="178" y="22" width="18" height="18" rx="3" fill="#fffaf0" stroke="#c9b187" stroke-width="0.5"/>
+<g transform="translate(180,24) scale(0.58)">
+
+        <rect x="5.00" y="5.00" width="14.00" height="14.00" rx="2.52" fill="#fff9ee" stroke="#c08f34" stroke-width="0.45"/>
+        <polygon points="10.04,15.64 13.96,15.64 13.12,9.20 10.88,9.20" fill="#c08f34"/>
+        <rect x="10.60" y="8.08" width="2.80" height="1.40" fill="#c08f34"/>
+        <path d="M 8.92 8.08 Q 7.52 7.52 7.24 6.40" fill="none" stroke="#c08f34" stroke-width="0.70" stroke-linecap="round"/>
+        <path d="M 15.08 8.08 Q 16.48 7.52 16.76 6.40" fill="none" stroke="#c08f34" stroke-width="0.70" stroke-linecap="round"/>
+        
+</g>
+<text x="187" y="46" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#2d261d">Fyrplats</text>
+</svg>

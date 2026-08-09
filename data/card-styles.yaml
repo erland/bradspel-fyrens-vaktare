@@ -1,0 +1,32 @@
+card_styles:
+  fynd:
+    name: "Fynd"
+    background: "#fbf6e8"
+    panel: "#fffdf6"
+    border: "#6f5a2e"
+    border_soft: "#b99a56"
+    accent: "#d8b45d"
+    accent_dark: "#8a682b"
+    text: "#1f1a12"
+    pattern: "blocks"
+    icon: "◇"
+    note: "Varm, ljus och upptäckande stil. Tonersnål blockmönstrad bakgrund."
+  hot:
+    name: "Hot"
+    background: "#f1f1f1"
+    panel: "#fbfbfb"
+    border: "#2f3034"
+    border_soft: "#777a82"
+    accent: "#70747f"
+    accent_dark: "#353842"
+    text: "#111111"
+    pattern: "cracks"
+    icon: "!"
+    note: "Kallare, stramare stil med diskreta spricklinjer."
+
+ink_friendly_notes:
+  enabled_for_current_release: true
+  changes:
+    - "Dekorativa cirklar längst ned på korten borttagna."
+    - "Kortytan är huvudsakligen vit för lägre tonerförbrukning."
+    - "Färg används främst i header, ram och små accenter."

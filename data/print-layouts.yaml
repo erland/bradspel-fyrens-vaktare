@@ -1,0 +1,46 @@
+print_layouts:
+  - id: cards_fynd_a4_4x4
+    name: "Fyndkort A4 4x4"
+    component_type: cards
+    deck: fynd
+    paper:
+      size: A4
+      orientation: portrait
+      width_mm: 210
+      height_mm: 297
+      margin_mm: 10
+    grid:
+      cols: 4
+      rows: 4
+      gap_mm: 4
+    card:
+      width_mm: 45
+      height_mm: 65
+      safe_zone_mm: 3
+      bleed_mm: 0
+    notes:
+      - "12 fyndkort + 4 tomma reservkort"
+      - "Enkelsidig prototyplayout"
+
+  - id: cards_hot_a4_4x4
+    name: "Hotkort A4 4x4"
+    component_type: cards
+    deck: hot
+    paper:
+      size: A4
+      orientation: portrait
+      width_mm: 210
+      height_mm: 297
+      margin_mm: 10
+    grid:
+      cols: 4
+      rows: 4
+      gap_mm: 4
+    card:
+      width_mm: 45
+      height_mm: 65
+      safe_zone_mm: 3
+      bleed_mm: 0
+    notes:
+      - "12 hotkort + 4 tomma reservkort"
+      - "Enkelsidig prototyplayout"

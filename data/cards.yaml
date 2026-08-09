@@ -1,0 +1,145 @@
+cards:
+  - id: FYN-001
+    name: "Glittrande kristall"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Få 1 kristall."
+  - id: FYN-002
+    name: "Gammal kista"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Välj: få 2 trä eller 1 valfri resurs."
+  - id: FYN-003
+    name: "Djupt stenlager"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Få 2 sten."
+  - id: FYN-004
+    name: "Bärbuskar"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Få 2 mat."
+  - id: FYN-005
+    name: "Torrt virke"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Få 2 trä."
+  - id: FYN-006
+    name: "Genväg under marken"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Flytta upp till 2 steg direkt."
+  - id: FYN-007
+    name: "Ljuslykta"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Ignorera nästa hotkort som dras på din tur."
+  - id: FYN-008
+    name: "Starka verktyg"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Få 1 valfri resurs utom kristall."
+  - id: FYN-009
+    name: "Byggplan"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Nästa Fyrdel eller basbygge kostar 1 valfri resurs mindre."
+  - id: FYN-010
+    name: "Gammal karta"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Titta på de 2 översta hotkorten. Lägg tillbaka dem i valfri ordning."
+  - id: FYN-011
+    name: "Vänlig vandrare"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Lägg 1 valfri resurs direkt i Basens förråd."
+  - id: FYN-012
+    name: "Morgonljus"
+    type: fynd
+    deck: fynd
+    count: 1
+    effect: "Flytta Mörker 1 steg bort från 0. Den kan inte gå över startvärdet."
+  - id: HOT-001
+    name: "Skuggor i skogen"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Alla spelare på Skog tappar 1 resurs om möjligt."
+  - id: HOT-002
+    name: "Ras i grottan"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Nästa spelare som utforskar i Grotta får ingen resurs."
+  - id: HOT-003
+    name: "Kall natt"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Betala 1 mat från Basens förråd. Om ni inte kan, sänk Mörker 1 extra steg."
+  - id: HOT-004
+    name: "Vilsen i dimman"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Alla spelare utanför Basen får inte flytta på sin nästa handling."
+  - id: HOT-005
+    name: "Sprickor i berget"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Alla spelare på Berg tappar 1 sten om möjligt."
+  - id: HOT-006
+    name: "Mörkret tätnar"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Sänk Mörker 1 extra steg."
+  - id: HOT-007
+    name: "Hungriga skuggor"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Varje spelare utanför Basen måste betala 1 mat eller tappa 1 valfri resurs."
+  - id: HOT-008
+    name: "Förlorade verktyg"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Nästa Utforska-handling ger 1 resurs mindre, minst 0."
+  - id: HOT-009
+    name: "Blockerad stig"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Nästa Flytta-handling kostar 2 handlingar i stället för 1."
+  - id: HOT-010
+    name: "Skugga över fyren"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Om minst en Fyrdel är byggd, betala 1 kristall eller sänk Mörker 1 extra steg."
+  - id: HOT-011
+    name: "Oroligt läger"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Nästa gång spelarna använder Nattvakt kostar det 2 mat i stället för 1."
+  - id: HOT-012
+    name: "Mörkervåg"
+    type: hot
+    deck: hot
+    count: 1
+    effect: "Dra ytterligare 1 hotkort och lös det. Flytta inte Mörkermarkören extra för detta kort."

@@ -1,0 +1,13 @@
+id: simulation_team_ai_full_strategies
+game_title: "Fyrens väktare"
+version: "v0.7.0"
+
+strategies:
+  mission_direct_build:
+    description_sv: "Rak byggplan med uppdrag och målantal."
+  mission_team_planner:
+    description_sv: "Fasbaserad lagplanering med matnödbroms."
+  mission_delayed_crystal:
+    description_sv: "Kristalljakt först när Ljuskärnan är aktuell."
+  mission_opportunistic_ruin:
+    description_sv: "Lagplanering med Ruin som sidouppdrag när det inte stör bygget."

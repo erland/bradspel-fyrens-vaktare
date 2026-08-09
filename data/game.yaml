@@ -1,0 +1,108 @@
+id: fyrens_vaktare
+title: Fyrens väktare
+version: v0.7.0
+ruleset: REGLERV4-STARTBALANS
+plan: REGLERV4 startbalans
+players:
+  min: 2
+  max: 4
+age: 8+
+play_time_minutes: 20-30
+mode: cooperative
+turn_order:
+  type: fixed
+  description: Spelarna spelar i fast turordning. När alla spelare haft tur sker Nattfasen.
+actions_per_turn:
+  base: 2
+  food_bonus:
+    enabled: true
+    cost: 1 mat som spelaren bär
+    bonus_actions: 1
+    limit: max 1 gång per spelare och tur
+setup_by_player_count:
+  2:
+    start_food_in_base: 6
+    darkness_start: 10
+  3:
+    start_food_in_base: 4
+    darkness_start: 10
+  4:
+    start_food_in_base: 4
+    darkness_start: 10
+darkness:
+  track_values:
+  - 10
+  - 9
+  - 8
+  - 7
+  - 6
+  - 5
+  - 4
+  - 3
+  - 2
+  - 1
+  - 0
+  direction: countdown
+  loss_at: 0
+  normal_night_change: -1
+  wording: När Mörker flyttas sänks markören 1 steg. Om Mörker når 0 förlorar spelarna.
+night_watch:
+  enabled: true
+  timing: början av Nattfasen
+  cost: 1 mat från Basförrådet
+  effect: Mörker sänks inte sitt vanliga steg denna natt. Dra och lös fortfarande
+    hotkort.
+  limit: högst 1 gång per natt
+base_free_actions:
+- lämna valfritt antal resurser till Basförrådet
+- ta valfritt antal mat från Basförrådet
+- lämna mat till Basförrådet
+win_condition: Bygg Ljuskärnan.
+loss_condition: Mörker når 0.
+resources:
+- wood
+- stone
+- food
+- crystal
+buildings:
+  lighthouse:
+    order:
+    - foundation
+    - tower
+    - light_core
+    costs:
+      foundation:
+        name_sv: Grund
+        cost:
+          stone: 3
+      tower:
+        name_sv: Torn
+        cost:
+          wood: 3
+          stone: 2
+      light_core:
+        name_sv: Ljuskärna
+        cost:
+          crystal: 2
+available_actions:
+- flytta
+- utforska
+- bygga_på_fyrplatsen
+explore_action_definition:
+  name_sv: Utforska
+  meaning: Se platsens effekt.
+  notes:
+  - Ruin ger 1 fyndkort.
+  - Grotta ger 1 sten eller 1 kristall + 1 hotkort.
+build_action_location:
+  action_sv: Bygga (på Fyrplatsen)
+  allowed_location: Fyrplatsen
+  win_reminder: Bygg Fyren innan Mörker når 0.
+lighthouse_note_sv: Fyren byggs på Fyrplatsen.
+resource_sharing:
+  enabled: true
+  same_location_only: true
+  cost_actions: 0
+  text_sv: När två eller fler spelare står på samma plats får de fritt ge resurser
+    till varandra. Det kostar ingen handling.
+  note_sv: Mat i Basens förråd hanteras bara i Basen.

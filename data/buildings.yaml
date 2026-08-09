@@ -1,0 +1,38 @@
+lighthouse_parts:
+- id: lighthouse_foundation
+  name: Grund
+  order: 1
+  cost:
+    stone: 3
+  effect: När Grund är byggd ignoreras första resursförlusten varje natt.
+- id: lighthouse_tower
+  name: Torn
+  order: 2
+  cost:
+    wood: 3
+    stone: 2
+  effect: Alla spelare får en gång per tur flytta 1 extra steg från Basen.
+- id: lighthouse_lightcore
+  name: Ljuskärna
+  order: 3
+  cost:
+    crystal: 2
+  effect: När Ljuskärnan byggs vinner spelarna direkt.
+optional_base_buildings:
+- id: storage
+  name: Förråd
+  cost:
+    wood: 2
+  effect: Förrådet får lagra obegränsat med resurser. Utan Förråd får Basen lagra
+    max 8 resurser.
+- id: wall
+  name: Mur
+  cost:
+    stone: 3
+  effect: En gång per spel kan ni ignorera ett hotkort som påverkar spelare på Basen.
+- id: workshop
+  name: Verkstad
+  cost:
+    wood: 2
+    stone: 1
+  effect: En gång per runda får en spelare samla 1 extra resurs när hen samlar.

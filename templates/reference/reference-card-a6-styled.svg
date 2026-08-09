@@ -1,0 +1,10 @@
+# reference-card-a6-portrait-2col-styled.svg
+
+Aktuell huvudvariant:
+- `output/print/reference/reference-card-a6-portrait-2col-v0.5.7.svg`
+
+v0.5.7 använder:
+- kolon i Platser & resurser
+- fet prefixtext före kolon
+- automatiskt balanserade panelhöjder
+- något större luft mellan textlinjer och punkter

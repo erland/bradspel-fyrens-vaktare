@@ -1,0 +1,11 @@
+id: simulation_team_ai_strategies
+game_title: "Fyrens väktare"
+version: "v0.7.0"
+
+strategies:
+  team_planner:
+    description_sv: "Koordinerad lagstrategi som räknar nästa Fyrdel, levererar burna resurser och samlar saknade resurser."
+  delayed_crystal:
+    description_sv: "Som team_planner, men väntar med hård kristalljakt tills Ljuskärnan är nästa mål."
+  opportunistic_ruin:
+    description_sv: "Som team_planner, men besöker Ruin när det är billigt och Mörker inte är för lågt."

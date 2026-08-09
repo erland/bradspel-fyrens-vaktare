@@ -1,0 +1,70 @@
+id: styled_refresh_v0_7_1
+name: Fyrens väktare – styled refresh
+version: v0.7.1
+description_sv: Gemensamt visuellt system för A6-kort, spelplan och 4x4-kortark.
+fonts:
+  heading: Arial
+  body: Arial
+  mono: Courier New
+palette:
+  page_bg: '#f2ead7'
+  panel_bg: '#fff9ee'
+  panel_alt: '#f8f0df'
+  frame: '#826742'
+  frame_dark: '#5b452b'
+  ink: '#2d261d'
+  muted: '#7e6a4d'
+  line: '#c9b187'
+  fynd: '#6f8a4a'
+  fynd_dark: '#496030'
+  hot: '#a05947'
+  hot_dark: '#74382a'
+  accent: '#b88c3a'
+  dark_track: '#5f5769'
+tiles:
+  Skog:
+    fill: '#dce8c7'
+    stroke: '#6f8a4a'
+    icon_asset: assets/style/tile-icons/skog.svg
+  Berg:
+    fill: '#dfddd7'
+    stroke: '#8c857a'
+    icon_asset: assets/style/tile-icons/berg.svg
+  Äng:
+    fill: '#efe7b1'
+    stroke: '#b79d48'
+    icon_asset: assets/style/tile-icons/ang.svg
+  Grotta:
+    fill: '#ddd7e8'
+    stroke: '#7e6b9f'
+    icon_asset: assets/style/tile-icons/grotta.svg
+  Ruin:
+    fill: '#eadcc8'
+    stroke: '#a38056'
+    icon_asset: assets/style/tile-icons/ruin.svg
+  Stig:
+    fill: '#f0e5d2'
+    stroke: '#b28a5a'
+    icon_asset: assets/style/tile-icons/stig.svg
+  Bas:
+    fill: '#d9e7e1'
+    stroke: '#5e8d7e'
+    icon_asset: assets/style/tile-icons/bas.svg
+  Fyrplats:
+    fill: '#f5e1b7'
+    stroke: '#c08f34'
+    icon_asset: assets/style/tile-icons/fyrplats.svg
+components:
+  board:
+    header_style: light panel with title band
+    tile_style: type-only tiles with icon + label
+    darkness_track: vertical right sidebar
+    notes_sv:
+    - Spelplanen visar endast platstyp och ikon.
+    - Detaljregler ligger på A6-kortet för att undvika omtryck vid små regeländringar.
+  reference_card:
+    layout: stående A6, två kolumner, sektionsboxar
+    section_style: färgtonade rubrikfält och diskreta paneler
+  cards:
+    layout: A4 4x4, 45x65 mm
+    style: mjukt inramade kort med färgad header och subtil bakgrund

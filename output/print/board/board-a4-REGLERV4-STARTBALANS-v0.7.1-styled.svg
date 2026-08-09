@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210.00mm" height="297.00mm" viewBox="0 0 210.00 297.00">
+<rect x="0" y="0" width="210" height="297" fill="#f2ead7"/>
+<rect x="8.00" y="8.00" width="194.00" height="281.00" rx="5" fill="#f8f0df" stroke="#826742" stroke-width="0.8"/>
+<rect x="10.00" y="10.00" width="190.00" height="14" rx="3.5" fill="#5b452b"/>
+<text x="105.00" y="15.70" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#fff8eb">Fyrens väktare</text>
+<text x="105.00" y="20.80" text-anchor="middle" font-family="Arial" font-size="2.8" fill="#e6d6b7">Spelplan</text>
+<rect x="8.00" y="26.00" width="156.00" height="184.00" rx="4" fill="#fff9ee" stroke="#826742" stroke-width="0.5"/>
+<rect x="10.00" y="28.00" width="28.00" height="42.75" rx="3" fill="#dce8c7" stroke="#6f8a4a" stroke-width="0.8"/>
+<rect x="10.00" y="28.00" width="28.00" height="7.2" rx="3" fill="#6f8a4a" opacity="0.15"/>
+
+        <rect x="19.80" y="42.38" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#6f8a4a" stroke-width="0.45"/>
+        <polygon points="24.00,43.38 21.65,46.41 26.35,46.41" fill="#6f8a4a"/>
+        <polygon points="24.00,44.90 21.31,48.42 26.69,48.42" fill="#6f8a4a"/>
+        <rect x="23.58" y="48.42" width="0.84" height="1.18" fill="#5b452b"/>
+        
+<text x="24.00" y="64.55" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Skog</text>
+<rect x="41.00" y="28.00" width="28.00" height="42.75" rx="3" fill="#dce8c7" stroke="#6f8a4a" stroke-width="0.8"/>
+<rect x="41.00" y="28.00" width="28.00" height="7.2" rx="3" fill="#6f8a4a" opacity="0.15"/>
+
+        <rect x="50.80" y="42.38" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#6f8a4a" stroke-width="0.45"/>
+        <polygon points="55.00,43.38 52.65,46.41 57.35,46.41" fill="#6f8a4a"/>
+        <polygon points="55.00,44.90 52.31,48.42 57.69,48.42" fill="#6f8a4a"/>
+        <rect x="54.58" y="48.42" width="0.84" height="1.18" fill="#5b452b"/>
+        
+<text x="55.00" y="64.55" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Skog</text>
+<rect x="72.00" y="28.00" width="28.00" height="42.75" rx="3" fill="#eadcc8" stroke="#a38056" stroke-width="0.8"/>
+<rect x="72.00" y="28.00" width="28.00" height="7.2" rx="3" fill="#a38056" opacity="0.15"/>
+
+        <rect x="81.80" y="42.38" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#a38056" stroke-width="0.45"/>
+        <rect x="83.48" y="44.73" width="1.51" height="3.53" fill="#a38056"/>
+        <rect x="85.66" y="44.22" width="1.51" height="4.03" fill="#a38056"/>
+        <rect x="87.85" y="45.23" width="0.84" height="3.02" fill="#a38056"/>
+        <rect x="83.31" y="44.05" width="1.85" height="0.50" fill="#a38056"/>
+        <rect x="85.50" y="43.55" width="1.85" height="0.50" fill="#a38056"/>
+        
+<text x="86.00" y="64.55" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Ruin</text>
+<rect x="103.00" y="28.00" width="28.00" height="42.75" rx="3" fill="#dfddd7" stroke="#8c857a" stroke-width="0.8"/>
+<rect x="103.00" y="28.00" width="28.00" height="7.2" rx="3" fill="#8c857a" opacity="0.15"/>
+
+        <rect x="112.80" y="42.38" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#8c857a" stroke-width="0.45"/>
+        <polygon points="113.81,48.76 116.33,44.90 118.18,48.76" fill="#8c857a"/>
+        <polygon points="115.74,48.76 118.68,43.89 120.36,48.76" fill="#8c857a" opacity="0.9"/>
+        
+<text x="117.00" y="64.55" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Berg</text>
+<rect x="134.00" y="28.00" width="28.00" height="42.75" rx="3" fill="#ddd7e8" stroke="#7e6b9f" stroke-width="0.8"/>
+<rect x="134.00" y="28.00" width="28.00" height="7.2" rx="3" fill="#7e6b9f" opacity="0.15"/>
+
+        <rect x="143.80" y="42.38" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#7e6b9f" stroke-width="0.45"/>
+        <path d="M 145.31 48.42 Q 145.65 45.06 148.00 44.05 Q 150.35 45.06 150.69 48.42 Z" fill="#7e6b9f"/>
+        <path d="M 146.82 48.42 Q 146.99 46.24 148.00 45.90 Q 149.01 46.24 149.18 48.42 Z" fill="#fff9ee"/>
+        
+<text x="148.00" y="64.55" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Grotta</text>
+<rect x="10.00" y="73.75" width="28.00" height="42.75" rx="3" fill="#d9e7e1" stroke="#5e8d7e" stroke-width="0.8"/>
+<rect x="10.00" y="73.75" width="28.00" height="7.2" rx="3" fill="#5e8d7e" opacity="0.15"/>
+
+        <rect x="19.80" y="88.12" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#5e8d7e" stroke-width="0.45"/>
+        <polygon points="21.14,91.99 24.00,89.64 26.86,91.99" fill="#5e8d7e"/>
+        <rect x="21.82" y="91.99" width="4.37" height="2.52" fill="#5e8d7e"/>
+        <rect x="23.50" y="92.83" width="1.01" height="1.68" fill="#fff9ee"/>
+        
+<text x="24.00" y="110.30" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Bas</text>
+<rect x="41.00" y="73.75" width="28.00" height="42.75" rx="3" fill="#f0e5d2" stroke="#b28a5a" stroke-width="0.8"/>
+<rect x="41.00" y="73.75" width="28.00" height="7.2" rx="3" fill="#b28a5a" opacity="0.15"/>
+
+        <rect x="50.80" y="88.12" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b28a5a" stroke-width="0.45"/>
+        <path d="M 52.31 93.67 C 53.15 92.49, 53.99 93.00, 54.66 91.65 C 55.50 89.81, 56.51 90.31, 57.35 89.64" fill="none" stroke="#b28a5a" stroke-width="0.84" stroke-linecap="round"/>
+        <circle cx="52.48" cy="93.67" r="0.50" fill="#b28a5a"/>
+        <circle cx="54.58" cy="91.82" r="0.42" fill="#b28a5a"/>
+        <circle cx="57.18" cy="89.81" r="0.50" fill="#b28a5a"/>
+        
+<text x="55.00" y="110.30" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Stig</text>
+<rect x="72.00" y="73.75" width="28.00" height="42.75" rx="3" fill="#f5e1b7" stroke="#c08f34" stroke-width="0.8"/>
+<rect x="72.00" y="73.75" width="28.00" height="7.2" rx="3" fill="#c08f34" opacity="0.15"/>
+
+        <rect x="81.80" y="88.12" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#c08f34" stroke-width="0.45"/>
+        <polygon points="84.82,94.51 87.18,94.51 86.67,90.64 85.33,90.64" fill="#c08f34"/>
+        <rect x="85.16" y="89.97" width="1.68" height="0.84" fill="#c08f34"/>
+        <path d="M 84.15 89.97 Q 83.31 89.64 83.14 88.97" fill="none" stroke="#c08f34" stroke-width="0.42" stroke-linecap="round"/>
+        <path d="M 87.85 89.97 Q 88.69 89.64 88.86 88.97" fill="none" stroke="#c08f34" stroke-width="0.42" stroke-linecap="round"/>
+        
+<text x="86.00" y="110.30" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Fyrplats</text>
+<rect x="103.00" y="73.75" width="28.00" height="42.75" rx="3" fill="#f0e5d2" stroke="#b28a5a" stroke-width="0.8"/>
+<rect x="103.00" y="73.75" width="28.00" height="7.2" rx="3" fill="#b28a5a" opacity="0.15"/>
+
+        <rect x="112.80" y="88.12" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b28a5a" stroke-width="0.45"/>
+        <path d="M 114.31 93.67 C 115.15 92.49, 115.99 93.00, 116.66 91.65 C 117.50 89.81, 118.51 90.31, 119.35 89.64" fill="none" stroke="#b28a5a" stroke-width="0.84" stroke-linecap="round"/>
+        <circle cx="114.48" cy="93.67" r="0.50" fill="#b28a5a"/>
+        <circle cx="116.58" cy="91.82" r="0.42" fill="#b28a5a"/>
+        <circle cx="119.18" cy="89.81" r="0.50" fill="#b28a5a"/>
+        
+<text x="117.00" y="110.30" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Stig</text>
+<rect x="134.00" y="73.75" width="28.00" height="42.75" rx="3" fill="#ddd7e8" stroke="#7e6b9f" stroke-width="0.8"/>
+<rect x="134.00" y="73.75" width="28.00" height="7.2" rx="3" fill="#7e6b9f" opacity="0.15"/>
+
+        <rect x="143.80" y="88.12" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#7e6b9f" stroke-width="0.45"/>
+        <path d="M 145.31 94.17 Q 145.65 90.81 148.00 89.81 Q 150.35 90.81 150.69 94.17 Z" fill="#7e6b9f"/>
+        <path d="M 146.82 94.17 Q 146.99 91.99 148.00 91.65 Q 149.01 91.99 149.18 94.17 Z" fill="#fff9ee"/>
+        
+<text x="148.00" y="110.30" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Grotta</text>
+<rect x="10.00" y="119.50" width="28.00" height="42.75" rx="3" fill="#f0e5d2" stroke="#b28a5a" stroke-width="0.8"/>
+<rect x="10.00" y="119.50" width="28.00" height="7.2" rx="3" fill="#b28a5a" opacity="0.15"/>
+
+        <rect x="19.80" y="133.88" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b28a5a" stroke-width="0.45"/>
+        <path d="M 21.31 139.42 C 22.15 138.24, 22.99 138.75, 23.66 137.40 C 24.50 135.56, 25.51 136.06, 26.35 135.39" fill="none" stroke="#b28a5a" stroke-width="0.84" stroke-linecap="round"/>
+        <circle cx="21.48" cy="139.42" r="0.50" fill="#b28a5a"/>
+        <circle cx="23.58" cy="137.57" r="0.42" fill="#b28a5a"/>
+        <circle cx="26.18" cy="135.56" r="0.50" fill="#b28a5a"/>
+        
+<text x="24.00" y="156.05" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Stig</text>
+<rect x="41.00" y="119.50" width="28.00" height="42.75" rx="3" fill="#efe7b1" stroke="#b79d48" stroke-width="0.8"/>
+<rect x="41.00" y="119.50" width="28.00" height="7.2" rx="3" fill="#b79d48" opacity="0.15"/>
+
+        <rect x="50.80" y="133.88" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b79d48" stroke-width="0.45"/>
+        <circle cx="55.00" cy="137.99" r="0.67" fill="#b79d48"/>
+        <circle cx="55.00" cy="136.48" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="56.26" cy="137.24" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="56.01" cy="138.75" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="53.99" cy="138.75" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="53.74" cy="137.24" r="0.84" fill="#b79d48" opacity="0.95"/>
+        
+<text x="55.00" y="156.05" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Äng</text>
+<rect x="72.00" y="119.50" width="28.00" height="42.75" rx="3" fill="#f0e5d2" stroke="#b28a5a" stroke-width="0.8"/>
+<rect x="72.00" y="119.50" width="28.00" height="7.2" rx="3" fill="#b28a5a" opacity="0.15"/>
+
+        <rect x="81.80" y="133.88" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b28a5a" stroke-width="0.45"/>
+        <path d="M 83.31 139.42 C 84.15 138.24, 84.99 138.75, 85.66 137.40 C 86.50 135.56, 87.51 136.06, 88.35 135.39" fill="none" stroke="#b28a5a" stroke-width="0.84" stroke-linecap="round"/>
+        <circle cx="83.48" cy="139.42" r="0.50" fill="#b28a5a"/>
+        <circle cx="85.58" cy="137.57" r="0.42" fill="#b28a5a"/>
+        <circle cx="88.18" cy="135.56" r="0.50" fill="#b28a5a"/>
+        
+<text x="86.00" y="156.05" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Stig</text>
+<rect x="103.00" y="119.50" width="28.00" height="42.75" rx="3" fill="#dfddd7" stroke="#8c857a" stroke-width="0.8"/>
+<rect x="103.00" y="119.50" width="28.00" height="7.2" rx="3" fill="#8c857a" opacity="0.15"/>
+
+        <rect x="112.80" y="133.88" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#8c857a" stroke-width="0.45"/>
+        <polygon points="113.81,140.26 116.33,136.40 118.18,140.26" fill="#8c857a"/>
+        <polygon points="115.74,140.26 118.68,135.39 120.36,140.26" fill="#8c857a" opacity="0.9"/>
+        
+<text x="117.00" y="156.05" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Berg</text>
+<rect x="134.00" y="119.50" width="28.00" height="42.75" rx="3" fill="#f0e5d2" stroke="#b28a5a" stroke-width="0.8"/>
+<rect x="134.00" y="119.50" width="28.00" height="7.2" rx="3" fill="#b28a5a" opacity="0.15"/>
+
+        <rect x="143.80" y="133.88" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b28a5a" stroke-width="0.45"/>
+        <path d="M 145.31 139.42 C 146.15 138.24, 146.99 138.75, 147.66 137.40 C 148.50 135.56, 149.51 136.06, 150.35 135.39" fill="none" stroke="#b28a5a" stroke-width="0.84" stroke-linecap="round"/>
+        <circle cx="145.48" cy="139.42" r="0.50" fill="#b28a5a"/>
+        <circle cx="147.58" cy="137.57" r="0.42" fill="#b28a5a"/>
+        <circle cx="150.18" cy="135.56" r="0.50" fill="#b28a5a"/>
+        
+<text x="148.00" y="156.05" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Stig</text>
+<rect x="10.00" y="165.25" width="28.00" height="42.75" rx="3" fill="#efe7b1" stroke="#b79d48" stroke-width="0.8"/>
+<rect x="10.00" y="165.25" width="28.00" height="7.2" rx="3" fill="#b79d48" opacity="0.15"/>
+
+        <rect x="19.80" y="179.62" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b79d48" stroke-width="0.45"/>
+        <circle cx="24.00" cy="183.74" r="0.67" fill="#b79d48"/>
+        <circle cx="24.00" cy="182.23" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="25.26" cy="182.99" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="25.01" cy="184.50" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="22.99" cy="184.50" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="22.74" cy="182.99" r="0.84" fill="#b79d48" opacity="0.95"/>
+        
+<text x="24.00" y="201.80" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Äng</text>
+<rect x="41.00" y="165.25" width="28.00" height="42.75" rx="3" fill="#eadcc8" stroke="#a38056" stroke-width="0.8"/>
+<rect x="41.00" y="165.25" width="28.00" height="7.2" rx="3" fill="#a38056" opacity="0.15"/>
+
+        <rect x="50.80" y="179.62" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#a38056" stroke-width="0.45"/>
+        <rect x="52.48" y="181.98" width="1.51" height="3.53" fill="#a38056"/>
+        <rect x="54.66" y="181.47" width="1.51" height="4.03" fill="#a38056"/>
+        <rect x="56.85" y="182.48" width="0.84" height="3.02" fill="#a38056"/>
+        <rect x="52.31" y="181.31" width="1.85" height="0.50" fill="#a38056"/>
+        <rect x="54.50" y="180.80" width="1.85" height="0.50" fill="#a38056"/>
+        
+<text x="55.00" y="201.80" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Ruin</text>
+<rect x="72.00" y="165.25" width="28.00" height="42.75" rx="3" fill="#efe7b1" stroke="#b79d48" stroke-width="0.8"/>
+<rect x="72.00" y="165.25" width="28.00" height="7.2" rx="3" fill="#b79d48" opacity="0.15"/>
+
+        <rect x="81.80" y="179.62" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b79d48" stroke-width="0.45"/>
+        <circle cx="86.00" cy="183.74" r="0.67" fill="#b79d48"/>
+        <circle cx="86.00" cy="182.23" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="87.26" cy="182.99" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="87.01" cy="184.50" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="84.99" cy="184.50" r="0.84" fill="#b79d48" opacity="0.95"/>
+        <circle cx="84.74" cy="182.99" r="0.84" fill="#b79d48" opacity="0.95"/>
+        
+<text x="86.00" y="201.80" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Äng</text>
+<rect x="103.00" y="165.25" width="28.00" height="42.75" rx="3" fill="#f0e5d2" stroke="#b28a5a" stroke-width="0.8"/>
+<rect x="103.00" y="165.25" width="28.00" height="7.2" rx="3" fill="#b28a5a" opacity="0.15"/>
+
+        <rect x="112.80" y="179.62" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#b28a5a" stroke-width="0.45"/>
+        <path d="M 114.31 185.17 C 115.15 183.99, 115.99 184.50, 116.66 183.15 C 117.50 181.31, 118.51 181.81, 119.35 181.14" fill="none" stroke="#b28a5a" stroke-width="0.84" stroke-linecap="round"/>
+        <circle cx="114.48" cy="185.17" r="0.50" fill="#b28a5a"/>
+        <circle cx="116.58" cy="183.32" r="0.42" fill="#b28a5a"/>
+        <circle cx="119.18" cy="181.31" r="0.50" fill="#b28a5a"/>
+        
+<text x="117.00" y="201.80" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Stig</text>
+<rect x="134.00" y="165.25" width="28.00" height="42.75" rx="3" fill="#dce8c7" stroke="#6f8a4a" stroke-width="0.8"/>
+<rect x="134.00" y="165.25" width="28.00" height="7.2" rx="3" fill="#6f8a4a" opacity="0.15"/>
+
+        <rect x="143.80" y="179.62" width="8.40" height="8.40" rx="1.51" fill="#fff9ee" stroke="#6f8a4a" stroke-width="0.45"/>
+        <polygon points="148.00,180.63 145.65,183.66 150.35,183.66" fill="#6f8a4a"/>
+        <polygon points="148.00,182.15 145.31,185.67 150.69,185.67" fill="#6f8a4a"/>
+        <rect x="147.58" y="185.67" width="0.84" height="1.18" fill="#5b452b"/>
+        
+<text x="148.00" y="201.80" text-anchor="middle" font-family="Arial" font-size="3.2" font-weight="bold" fill="#2d261d">Skog</text>
+<rect x="166.00" y="28.00" width="34.00" height="180.00" rx="4" fill="#fff9ee" stroke="#826742" stroke-width="0.6"/>
+<rect x="166.00" y="28.00" width="34.00" height="11" rx="4" fill="#5f5769"/>
+<text x="183.00" y="32.70" text-anchor="middle" font-family="Arial" font-size="3.5" font-weight="bold" fill="#f8f2ff">MÖRKER</text>
+<text x="183.00" y="36.80" text-anchor="middle" font-family="Arial" font-size="2.1" fill="#e2d9f0">räknar ned mot 0</text>
+<rect x="170.00" y="41.00" width="26.00" height="13.98" rx="2" fill="#e4f1e6" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="49.79" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">10</text>
+<rect x="170.00" y="56.18" width="26.00" height="13.98" rx="2" fill="#eee7f7" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="64.97" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">9</text>
+<rect x="170.00" y="71.36" width="26.00" height="13.98" rx="2" fill="#eee7f7" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="80.15" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">8</text>
+<rect x="170.00" y="86.55" width="26.00" height="13.98" rx="2" fill="#eee7f7" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="95.34" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">7</text>
+<rect x="170.00" y="101.73" width="26.00" height="13.98" rx="2" fill="#eee7f7" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="110.52" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">6</text>
+<rect x="170.00" y="116.91" width="26.00" height="13.98" rx="2" fill="#f6f1ea" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="125.70" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">5</text>
+<rect x="170.00" y="132.09" width="26.00" height="13.98" rx="2" fill="#f6f1ea" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="140.88" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">4</text>
+<rect x="170.00" y="147.27" width="26.00" height="13.98" rx="2" fill="#f6f1ea" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="156.06" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">3</text>
+<rect x="170.00" y="162.45" width="26.00" height="13.98" rx="2" fill="#f5e6e1" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="171.25" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">2</text>
+<rect x="170.00" y="177.64" width="26.00" height="13.98" rx="2" fill="#f5e6e1" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="186.43" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">1</text>
+<rect x="170.00" y="192.82" width="26.00" height="13.98" rx="2" fill="#f5e6e1" stroke="#c9b187" stroke-width="0.35"/>
+<text x="183.00" y="201.61" text-anchor="middle" font-family="Arial" font-size="4.1" font-weight="bold" fill="#2d261d">0</text>
+<text x="200.00" y="287.20" text-anchor="end" font-family="Arial" font-size="2.0" fill="#7e6a4d">styled v0.7.2</text>
+</svg>
