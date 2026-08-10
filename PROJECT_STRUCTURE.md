@@ -23,3 +23,10 @@
 3. Kör balanssimulering vid regel-/brädesändringar med `scripts/simulate_manual_like.py`.
 4. Uppdatera `PROJECT_STATUS.md` och `CHANGELOG.md`.
 5. Uppdatera `release/` när en ny utskriftsversion ska delas.
+
+
+## GitHub Actions
+
+- `.github/workflows/01-validate.yml` – validerar projekt, data, regelbok och releasefiler
+- `.github/workflows/02-build-preview.yml` – bygger preview-PDF:er för print-and-play-filer
+- `.github/workflows/03-release.yml` – paketerar print-and-play-release vid tagg `v*`

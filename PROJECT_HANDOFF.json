@@ -1,7 +1,7 @@
 {
   "project": "Fyrens väktare",
-  "handoff_version": "v0.8.5",
-  "recommended_base_zip": "fyrens-vaktare-v0.8.5-rulebook-no-version.zip",
+  "handoff_version": "v0.8.6",
+  "recommended_base_zip": "fyrens-vaktare-v0.8.6-github-actions.zip",
   "ruleset": "REGLERV4-STARTBALANS",
   "current_standard_simulation": {
     "script": "scripts/simulate_manual_like.py",
@@ -82,7 +82,9 @@
     "fynd_cards": "output/print/cards/fyndkort-a4-4x4-v0.7.3-styled.svg",
     "hot_cards": "output/print/cards/hotkort-a4-4x4-v0.7.3-styled.svg",
     "rulebook_pdf": "release/v0.8.2/docs/rulebook.pdf",
-    "rulebook_analysis": "docs/rulebook-clarity-analysis-v0.8.3.md"
+    "rulebook_analysis": "docs/rulebook-clarity-analysis-v0.8.3.md",
+    "github_actions_doc": "docs/github-actions-release-workflow.md",
+    "ci_validate": "scripts/ci_validate_project.py"
   },
   "notes": [
     "Äldre genererade filer i output/ har rensats bort; behåll endast aktuell rekommenderad output.",
@@ -93,7 +95,8 @@
     "Regelboken finns som Pandoc-genererad PDF i release/v0.8.2/docs/rulebook.pdf.",
     "Regelboken är uppdaterad i v0.8.3: ingen TOC/kapitelnumrering, tydligare story och begrepp.",
     "Regelboken är rensad från prototyp- och utskriftsavsnitt i v0.8.4.",
-    "Regelboken saknar synlig versionsrad i v0.8.5."
+    "Regelboken saknar synlig versionsrad i v0.8.5.",
+    "GitHub Actions tillagda i v0.8.6 för validering, preview-PDF och releasepaket."
   ],
-  "release": "release/v0.8.5"
+  "release": "release/v0.8.6"
 }

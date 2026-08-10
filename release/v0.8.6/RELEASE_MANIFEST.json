@@ -1,0 +1,72 @@
+{
+  "release": "v0.8.6",
+  "purpose": "Ren release-struktur med aktuella printfiler separat från källfiler.",
+  "print_files": {
+    "pdf": [
+      "print/pdf/board-a4.pdf",
+      "print/pdf/reference-card-a6.pdf",
+      "print/pdf/reference-card-a4-4up.pdf",
+      "print/pdf/fyndkort-a4-4x4.pdf",
+      "print/pdf/hotkort-a4-4x4.pdf"
+    ],
+    "svg": [
+      "print/svg/board-a4.svg",
+      "print/svg/reference-card-a6.svg",
+      "print/svg/reference-card-a4-4up.svg",
+      "print/svg/fyndkort-a4-4x4.svg",
+      "print/svg/hotkort-a4-4x4.svg"
+    ]
+  },
+  "source_of_truth": {
+    "rules": "data/rules.yaml",
+    "board": "data/board.yaml",
+    "cards": "data/cards.yaml",
+    "reference_card": "data/reference-card.yaml",
+    "visual_style": "data/visual-style.yaml",
+    "board_and_print_renderer": "scripts/render_styled_printables.py"
+  },
+  "notes": [
+    "release/v0.8.0/print är avsett för direkt utskrift.",
+    "output/ behåller bara aktuella rekommenderade genererade filer.",
+    "docs/archive innehåller äldre historik och ska inte vara primär källa.",
+    "PDF-versioner av alla aktuella A4/A6-utskrifter finns i release/v0.8.0/print/pdf.",
+    "Fynd- och hotkort uppdaterade till ink-friendly styled variant.",
+    "Dekorativa cirklar längst ned på korten är borttagna.",
+    "PDF-versionerna av kortarken är regenererade från uppdaterade SVG-filer.",
+    "A6-referenskort uppdaterat till ink-friendly styled variant.",
+    "Spelplan uppdaterad till ink-friendly light variant.",
+    "PDF-versionerna för A6, A6 4-up och spelplan regenererade.",
+    "Regelboken finns nu som professionellt formaterad PDF i release/v0.8.2/docs/rulebook.pdf.",
+    "Regelboks-PDF är genererad från docs/rulebook.md med Pandoc och XeLaTeX.",
+    "Regelboks-PDF saknar nu innehållsförteckning och kapitelnumrering.",
+    "Regeltexten har analyserats och uppdaterats för bättre förståelse vid blindtest.",
+    "Berättelse, viktiga begrepp och Nattfas/Nattvakt har förtydligats.",
+    "Regelboken är rensad från prototypformuleringar och utskriftsavsnitt.",
+    "Speltest- och produktionsinformation ligger kvar i separata projektdokument.",
+    "Regelboks-PDF är regenererad utan innehållsförteckning och kapitelnumrering.",
+    "Regelboken har ingen synlig versionsrad i början.",
+    "Regelboks-PDF visar inte längre release-/versionsrad på titelsidan.",
+    "Intern versionshantering ligger kvar i projektmetadata och changelog.",
+    "GitHub Actions tillagda för validering, print-preview och releasepaketering.",
+    ".github-katalogen ligger i projektroten på samma nivå som README.md.",
+    "Releasepaketeringen bygger print-PDF:er och laddar upp både zip och separata PDF-assets."
+  ],
+  "docs": [
+    "docs/rulebook.pdf",
+    "docs/rulebook.md",
+    "docs/rulebook-clarity-analysis-v0.8.3.md",
+    "docs/github-actions-release-workflow.md",
+    "docs/build_rulebook_pdf.py"
+  ],
+  "ci": {
+    "validate": ".github/workflows/01-validate.yml",
+    "build_preview": ".github/workflows/02-build-preview.yml",
+    "release": ".github/workflows/03-release.yml",
+    "scripts": [
+      "scripts/ci_validate_project.py",
+      "scripts/ci_build_print_preview.py",
+      "scripts/ci_package_release.py"
+    ]
+  },
+  "standard_simulation_command_note": "Simuleringskommandot är inte en del av CI/releaseflödet i v0.8.6."
+}

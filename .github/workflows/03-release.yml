@@ -1,0 +1,64 @@
+name: Release Print-and-Play
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out tagged revision
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip pyyaml cairosvg
+
+      - name: Install pinned Pandoc
+        uses: pandoc/actions/setup@v1
+        with:
+          version: "3.1.11.1"
+
+      - name: Install XeLaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-latex-extra texlive-fonts-recommended fonts-dejavu-core
+          fc-cache -f
+
+      - name: Validate project
+        run: python scripts/ci_validate_project.py .
+
+      - name: Package release assets
+        run: python scripts/ci_package_release.py --output-dir "${RUNNER_TEMP}/release-dist" --release-name "${GITHUB_REF_NAME}"
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="${GITHUB_REF_NAME}"
+          shopt -s nullglob
+          assets=("${RUNNER_TEMP}"/release-dist/*.zip "${RUNNER_TEMP}"/release-dist/pdf-assets/*.pdf)
+          if [[ ${#assets[@]} -eq 0 ]]; then
+            echo "No release assets were created." >&2
+            exit 1
+          fi
+          if gh release view "${tag}" >/dev/null 2>&1; then
+            gh release upload "${tag}" "${assets[@]}" --clobber
+          else
+            gh release create "${tag}" "${assets[@]}" \
+              --title "${tag}" \
+              --generate-notes
+          fi

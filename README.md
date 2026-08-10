@@ -223,15 +223,15 @@ Projektet sparar endast **aktuella rekommenderade genererade filer** i `output/`
 
 Aktuell samlad utskriftsrelease finns i:
 
-- `release/v0.8.5/`
+- `release/v0.8.6/`
 
-Använd `release/v0.8.5/print/` för utskrift och `docs/` för aktuella källdokument.
+Använd `release/v0.8.6/print/` för utskrift och `docs/` för aktuella källdokument.
 Äldre dokumenthistorik ligger i `docs/archive/`.
 
 ## PDF-utskrifter
 
 Aktuell release innehåller nu både SVG och PDF.
-Använd i första hand PDF-filerna i `release/v0.8.5/print/pdf/` för utskrift om du vill undvika beroende av SVG-visare.
+Använd i första hand PDF-filerna i `release/v0.8.6/print/pdf/` för utskrift om du vill undvika beroende av SVG-visare.
 
 
 ## v0.8.1 – ink-friendly reference and board
@@ -245,7 +245,7 @@ Använd i första hand PDF-filerna i `release/v0.8.5/print/pdf/` för utskrift o
 
 Regelboken finns nu som Pandoc-genererad PDF:
 
-- `release/v0.8.5/docs/rulebook.pdf`
+- `release/v0.8.6/docs/rulebook.pdf`
 
 Källan är fortfarande `docs/rulebook.md`.
 
@@ -267,7 +267,7 @@ Regelboken har rensats från projektspråk:
 - inget utskriftsavsnitt
 - inget första-speltest-avsnitt
 
-Utskrift och speltest hanteras i separata dokument och i `release/v0.8.5/README.md`.
+Utskrift och speltest hanteras i separata dokument och i `release/v0.8.6/README.md`.
 
 ## v0.8.5 – regelbok utan synlig versionsrad
 
@@ -275,3 +275,15 @@ Regelboken har rensats från synlig versionsinformation:
 - versionsraden i början är borttagen
 - PDF-titelsidan visar inte längre release-/versionsrad
 - PDF-subtiteln är förenklad till “Regelbok”
+
+## v0.8.6 – GitHub Actions
+
+Projektet har nu GitHub Actions för:
+
+- validering av källor, regelbok, data och releasefiler
+- bygg av preview-PDF:er för allt som ska skrivas ut
+- paketering av riktiga print-and-play-releaser vid tagg `v*`
+
+Workflow-filerna ligger i `.github/workflows/`.
+
+Dokumentation finns i `docs/github-actions-release-workflow.md`.
