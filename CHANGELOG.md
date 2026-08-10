@@ -854,14 +854,14 @@ Detta är första funktionella spelbrädet och ska behandlas som prototypmateria
 - Flyttade äldre dokument till `docs/archive/`.
 - Lade till dokumentindex i `docs/README.md`.
 - Lade till arkivindex i `docs/archive/README.md`.
-- Skapade `release/v0.8.5/` med aktuella printfiler och centrala dokument.
+- Skapade `release/v0.8.7/` med aktuella printfiler och centrala dokument.
 - Lade till `PROJECT_STRUCTURE.md`.
 
 ## v0.7.9 – PDF release output
 
 - Genererade PDF-versioner av spelplan, referenskort och kortark.
-- Delade upp `release/v0.8.5/print/` i `svg/` och `pdf/`.
-- Uppdaterade `release/v0.8.5/README.md` och `RELEASE_MANIFEST.json`.
+- Delade upp `release/v0.8.7/print/` i `svg/` och `pdf/`.
+- Uppdaterade `release/v0.8.7/README.md` och `RELEASE_MANIFEST.json`.
 
 
 ## v0.8.0 – Ink-friendly cards
@@ -880,7 +880,7 @@ Detta är första funktionella spelbrädet och ska behandlas som prototypmateria
 
 ## v0.8.2 – rulebook PDF
 
-- Genererade `release/v0.8.5/docs/rulebook.pdf` med Pandoc/XeLaTeX.
+- Genererade `release/v0.8.7/docs/rulebook.pdf` med Pandoc/XeLaTeX.
 - Uppdaterade `docs/rulebook.md` med aktuell print/release-information.
 - Lade till `scripts/build_rulebook_pdf.py`.
 - Uppdaterade release-manifest och README.
@@ -905,3 +905,15 @@ Detta är första funktionella spelbrädet och ska behandlas som prototypmateria
 - Tog bort synlig versionsrad i början av regelboken.
 - Förenklade regelboks-PDF:ens titelsida så den inte visar release-/versionsrad.
 - Regenererade regelboks-PDF.
+
+## v0.8.6 – GitHub Actions
+
+- Införde GitHub Actions för validering, preview-bygge och releasepaketering.
+- `.github` ligger i projektroten på samma nivå som `README.md`.
+- Lade till CI-skript för projektvalidering, PDF-preview och releasepaket.
+- Uppdaterade release-manifest och dokumentation.
+
+## v0.8.7 – GitHub Actions lmodern-fix
+
+- Lade till `lmodern` i GitHub Actions för preview och release.
+- Fixar `LaTeX Error: File 'lmodern.sty' not found` vid Pandoc/XeLaTeX-bygge.

@@ -1,44 +1,4 @@
----
-title: "Fyrens väktare"
-subtitle: "Regelbok"
-lang: sv-SE
-documentclass: article
-papersize: a4
-fontsize: 10.5pt
-geometry:
-  - top=22mm
-  - bottom=24mm
-  - left=22mm
-  - right=22mm
-mainfont: "DejaVu Serif"
-sansfont: "DejaVu Sans"
-monofont: "DejaVu Sans Mono"
-colorlinks: true
-linkcolor: black
-urlcolor: black
-header-includes:
-  - \usepackage{titlesec}
-  - \usepackage{xcolor}
-  - \usepackage{fancyhdr}
-  - \usepackage{enumitem}
-  - \definecolor{fyrbrown}{HTML}{5B452B}
-  - \definecolor{fyrlight}{HTML}{F4E3B8}
-  - \definecolor{fyrline}{HTML}{826742}
-  - \titleformat{\section}{\Large\bfseries\color{fyrbrown}}{\thesection}{0.7em}{}
-  - \titleformat{\subsection}{\large\bfseries\color{fyrbrown}}{\thesubsection}{0.7em}{}
-  - \titlespacing*{\section}{0pt}{1.4em}{0.55em}
-  - \titlespacing*{\subsection}{0pt}{1.0em}{0.35em}
-  - \setlist{nosep,leftmargin=*}
-  - \pagestyle{fancy}
-  - \fancyhf{}
-  - \lhead{Fyrens väktare}
-  - \rhead{Regelbok}
-  - \cfoot{\thepage}
-  - \renewcommand{\headrulewidth}{0.3pt}
-  - \renewcommand{\footrulewidth}{0pt}
-  - \usepackage{tcolorbox}
-  - \tcbset{colback=fyrlight!25,colframe=fyrline,arc=2mm,boxrule=0.4pt,left=2mm,right=2mm,top=1mm,bottom=1mm}
----
+# Fyrens väktare – regler
 
 Ett kooperativt äventyrs- och byggspel för 2–4 spelare från 8 år. Speltid: cirka 20–30 minuter.
 

@@ -7,7 +7,7 @@ import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 RULEBOOK = ROOT / "docs" / "rulebook.md"
-RELEASE = ROOT / "release" / "v0.8.7"
+RELEASE = ROOT / "release" / "v0.8.6"
 OUT = RELEASE / "docs" / "rulebook.pdf"
 BUILD = ROOT / "build" / "rulebook-pdf"
 PANDOC_MD = BUILD / "rulebook-pandoc.md"
