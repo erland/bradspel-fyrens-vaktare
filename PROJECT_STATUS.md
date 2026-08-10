@@ -72,14 +72,14 @@ Genomfört:
 Genomfört:
 - Flyttat äldre dokument och gamla simuleringsanalyser till `docs/archive/`.
 - Lagt till `docs/README.md` och `docs/archive/README.md`.
-- Skapat `release/v0.8.6/` med aktuella printfiler och centrala speldokument.
+- Skapat `release/v0.8.7/` med aktuella printfiler och centrala speldokument.
 - Lagt till `PROJECT_STRUCTURE.md`.
 
 ## v0.7.9 – PDF-versioner i release
 
 Genomfört:
 - Genererat PDF-versioner av aktuell spelplan, referenskort och kortark.
-- Strukturerat release-printfiler i `release/v0.8.6/print/svg/` och `release/v0.8.6/print/pdf/`.
+- Strukturerat release-printfiler i `release/v0.8.7/print/svg/` och `release/v0.8.7/print/pdf/`.
 - Uppdaterat release-dokumentation och manifest.
 
 
@@ -93,14 +93,14 @@ Genomfört:
 
 - Färdigställd ink-friendly styled variant av A6-referenskortet.
 - Färdigställd ink-friendly light-variant av spelplanen.
-- Regenererad release `release/v0.8.6/` med uppdaterade SVG- och PDF-filer.
+- Regenererad release `release/v0.8.7/` med uppdaterade SVG- och PDF-filer.
 
 ## v0.8.2 – regelboks-PDF
 
 Genomfört:
 - Uppdaterat `docs/rulebook.md` med aktuell releaseinformation.
 - Skapat professionellt formaterad regelboks-PDF med Pandoc/XeLaTeX.
-- Lagt PDF och uppdaterad markdown-källa i `release/v0.8.6/docs/`.
+- Lagt PDF och uppdaterad markdown-källa i `release/v0.8.7/docs/`.
 - Lagt till `scripts/build_rulebook_pdf.py` för framtida regenerering.
 
 ## v0.8.3 – regelboksgenomgång
@@ -110,7 +110,7 @@ Genomfört:
 - Gjorde en förståelseanalys av regeltexten.
 - Uppdaterade `docs/rulebook.md` för tydligare berättelse, begrepp och nattfas.
 - Lade till `docs/rulebook-clarity-analysis-v0.8.3.md`.
-- Regenererade `release/v0.8.6/docs/rulebook.pdf`.
+- Regenererade `release/v0.8.7/docs/rulebook.pdf`.
 
 ## v0.8.4 – regelboksrensning
 
@@ -118,14 +118,14 @@ Genomfört:
 - Tog bort prototypformuleringar från regelboken.
 - Tog bort avsnitten `Första speltest` och `Utskrift` från regelboken.
 - Uppdaterade regelboksanalysen med v0.8.4-notering.
-- Regenererade `release/v0.8.6/docs/rulebook.pdf`.
+- Regenererade `release/v0.8.7/docs/rulebook.pdf`.
 
 ## v0.8.5 – regelbok utan synlig versionsrad
 
 Genomfört:
 - Tog bort `Version`-raden i början av `docs/rulebook.md`.
 - Tog bort synlig release-/versionsinformation från regelboks-PDF.
-- Regenererade `release/v0.8.6/docs/rulebook.pdf`.
+- Regenererade `release/v0.8.7/docs/rulebook.pdf`.
 
 ## v0.8.6 – GitHub Actions
 
@@ -138,3 +138,11 @@ Genomfört:
 - Lade till `scripts/ci_package_release.py`.
 - Lade till `docs/github-actions-release-workflow.md`.
 - Uppdaterade release v0.8.6 och manifest.
+
+## v0.8.7 – GitHub Actions lmodern-fix
+
+Genomfört:
+- Uppdaterade `.github/workflows/02-build-preview.yml`.
+- Uppdaterade `.github/workflows/03-release.yml`.
+- Lade till paketet `lmodern` i apt-installationen för XeLaTeX/Pandoc.
+- Uppdaterade dokumentationen i `docs/github-actions-release-workflow.md`.

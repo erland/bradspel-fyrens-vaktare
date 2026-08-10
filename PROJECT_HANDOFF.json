@@ -1,7 +1,7 @@
 {
   "project": "Fyrens väktare",
-  "handoff_version": "v0.8.6",
-  "recommended_base_zip": "fyrens-vaktare-v0.8.6-github-actions.zip",
+  "handoff_version": "v0.8.7",
+  "recommended_base_zip": "fyrens-vaktare-v0.8.7-github-actions-lmodern-fix.zip",
   "ruleset": "REGLERV4-STARTBALANS",
   "current_standard_simulation": {
     "script": "scripts/simulate_manual_like.py",
@@ -96,7 +96,8 @@
     "Regelboken är uppdaterad i v0.8.3: ingen TOC/kapitelnumrering, tydligare story och begrepp.",
     "Regelboken är rensad från prototyp- och utskriftsavsnitt i v0.8.4.",
     "Regelboken saknar synlig versionsrad i v0.8.5.",
-    "GitHub Actions tillagda i v0.8.6 för validering, preview-PDF och releasepaket."
+    "GitHub Actions tillagda i v0.8.6 för validering, preview-PDF och releasepaket.",
+    "v0.8.7 lägger till lmodern i GitHub Actions för att fixa Pandoc/XeLaTeX-bygget."
   ],
-  "release": "release/v0.8.6"
+  "release": "release/v0.8.7"
 }

@@ -39,7 +39,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            texlive-xetex texlive-latex-extra texlive-fonts-recommended fonts-dejavu-core
+            texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern fonts-dejavu-core
           fc-cache -f
 
       - name: Validate project

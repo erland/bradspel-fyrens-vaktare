@@ -187,10 +187,10 @@ PDF-versioner för aktuell release finns också i `release/v0.8.0/print/pdf/` oc
 
 Senaste rekommenderade kortark är ink-friendly styled-varianten i `release/v0.8.0/print/`.
 
-- Senaste rekommenderade release för utskrift är `release/v0.8.7/`.
+- Senaste rekommenderade release för utskrift är `release/v0.8.6/`.
 - A6-kort och spelplan finns nu också i toner-snål ink-friendly-variant.
 
-Regelboken finns nu som PDF i `release/v0.8.7/docs/rulebook.pdf`, genererad från `docs/rulebook.md` med Pandoc/XeLaTeX.
+Regelboken finns nu som PDF i `release/v0.8.6/docs/rulebook.pdf`, genererad från `docs/rulebook.md` med Pandoc/XeLaTeX.
 
 Regelboken är uppdaterad i v0.8.3 för bättre blindtestbarhet. PDF:en saknar innehållsförteckning och kapitelnumrering. Analys finns i `docs/rulebook-clarity-analysis-v0.8.3.md`.
 
@@ -199,5 +199,3 @@ Regelboken är rensad från prototyp-/utskriftsprat i v0.8.4. Produktions- och s
 Regelboken saknar nu synlig versionsrad i v0.8.5. Versionshantering finns i projektmetadata/changelog, inte i spelarregelboken.
 
 GitHub Actions finns från v0.8.6: validering, print-preview och releasepaketering. Se `docs/github-actions-release-workflow.md`.
-
-v0.8.7 fixar GitHub Actions PDF-bygge genom att installera `lmodern` i preview/release-workflows.
