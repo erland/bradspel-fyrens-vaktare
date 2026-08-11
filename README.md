@@ -297,3 +297,22 @@ Det löser GitHub Actions-felet:
 ```text
 LaTeX Error: File `lmodern.sty' not found.
 ```
+
+## v0.8.8 – repo-cleanup
+
+Projektet har nu renare GitHub-struktur:
+
+- `output/` versioneras inte längre.
+- `release/` versioneras inte längre.
+- `dist/` och `build/` är lokala/genererade kataloger.
+- `.gitignore` skyddar de genererade katalogerna.
+- `scripts/build_print_and_play.py` bygger allt printmaterial från källorna.
+- GitHub Actions använder samma script som lokal byggning.
+
+Bygg lokalt:
+
+```bash
+python scripts/build_print_and_play.py --output-dir dist/print-and-play --release-name local
+```
+
+Se även `docs/release-policy.md`.

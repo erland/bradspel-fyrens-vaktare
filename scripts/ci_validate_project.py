@@ -1,30 +1,18 @@
 #!/usr/bin/env python3
 """CI-validering för Fyrens väktare.
 
-Kontrollerar att projektets viktigaste källor, releasefiler och utskriftsfiler
-hänger ihop. Skriptet är avsett att köras både lokalt och i GitHub Actions.
+Validerar projektkällor och byggscript. Release- och output-kataloger krävs
+inte, eftersom de genereras från källorna av scripts/build_print_and_play.py.
 """
 
 from __future__ import annotations
 
 import argparse
-import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import unquote
-
-EXPECTED_PRINT_PDFS = {
-    "board-a4.pdf",
-    "reference-card-a6.pdf",
-    "reference-card-a4-4up.pdf",
-    "fyndkort-a4-4x4.pdf",
-    "hotkort-a4-4x4.pdf",
-}
-
-EXPECTED_PRINT_SVGS = {
-    name.replace(".pdf", ".svg") for name in EXPECTED_PRINT_PDFS
-}
 
 REQUIRED_ROOT_PATHS = (
     "README.md",
@@ -43,7 +31,11 @@ REQUIRED_ROOT_PATHS = (
     "data/visual-style.yaml",
     "data/ink-friendly-style.yaml",
     "scripts/build_rulebook_pdf.py",
+    "scripts/render_styled_printables.py",
     "scripts/apply_ink_friendly_reference_and_board.py",
+    "scripts/build_print_and_play.py",
+    "scripts/ci_build_print_preview.py",
+    "scripts/ci_package_release.py",
 )
 
 REQUIRED_WORKFLOWS = (
@@ -52,6 +44,7 @@ REQUIRED_WORKFLOWS = (
     ".github/workflows/03-release.yml",
 )
 
+GENERATED_DIRS = ("output", "release", "dist", "build")
 LOCAL_LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
 
@@ -65,25 +58,6 @@ def add_warning(warnings: list[str], message: str) -> None:
     print(f"WARNING: {message}", file=sys.stderr)
 
 
-def version_key(path: Path) -> tuple[int, ...]:
-    m = re.fullmatch(r"v(\d+(?:\.\d+)*)", path.name)
-    if not m:
-        return ()
-    return tuple(int(part) for part in m.group(1).split("."))
-
-
-def latest_release(root: Path, errors: list[str]) -> Path | None:
-    release_root = root / "release"
-    if not release_root.exists():
-        add_error(errors, "release/-katalogen saknas.")
-        return None
-    candidates = [p for p in release_root.iterdir() if p.is_dir() and version_key(p)]
-    if not candidates:
-        add_error(errors, "Ingen release/vX.Y.Z-katalog hittades.")
-        return None
-    return sorted(candidates, key=version_key)[-1]
-
-
 def read_yaml(path: Path):
     try:
         import yaml  # type: ignore
@@ -93,10 +67,10 @@ def read_yaml(path: Path):
         return yaml.safe_load(f)
 
 
-def validate_markdown_links(root: Path, errors: list[str]) -> None:
+def validate_markdown_links(root: Path, errors: list[str], warnings: list[str]) -> None:
     for md in sorted(root.rglob("*.md")):
         rel_parts = set(md.relative_to(root).parts)
-        if ".git" in rel_parts or "archive" in rel_parts or "build" in rel_parts:
+        if rel_parts.intersection({".git", "archive", "build", "dist", "output", "release"}):
             continue
         text = md.read_text(encoding="utf-8")
         for target in LOCAL_LINK_RE.findall(text):
@@ -114,8 +88,17 @@ def validate_markdown_links(root: Path, errors: list[str]) -> None:
                 candidate.relative_to(root.resolve())
             except ValueError:
                 continue
-            if not candidate.exists():
-                add_error(errors, f"Trasig intern Markdown-länk i {md.relative_to(root)}: {target}")
+
+            if candidate.exists():
+                continue
+
+            # Dokumentation får nämna genererade release-/dist-filer utan att de
+            # finns i repo. Det är inte en trasig källa.
+            if target.startswith(("release/", "output/", "dist/")):
+                add_warning(warnings, f"Markdown-länk pekar på genererad fil som inte finns i repo: {md.relative_to(root)} -> {target}")
+                continue
+
+            add_error(errors, f"Trasig intern Markdown-länk i {md.relative_to(root)}: {target}")
 
 
 def validate_rulebook(root: Path, errors: list[str]) -> None:
@@ -130,8 +113,12 @@ def validate_rulebook(root: Path, errors: list[str]) -> None:
         if re.search(pattern, text, flags=re.IGNORECASE):
             add_error(errors, message)
 
+    for term in ("Mörker", "Nattvakt", "medtagen mat", "Fyrplatsen", "Ljuskärna"):
+        if term not in text:
+            add_error(errors, f"Regelboken saknar viktigt begrepp: {term}")
 
-def validate_data(root: Path, errors: list[str], warnings: list[str]) -> None:
+
+def validate_data(root: Path, errors: list[str]) -> None:
     try:
         board = read_yaml(root / "data/board.yaml")
         cards = read_yaml(root / "data/cards.yaml")
@@ -157,12 +144,14 @@ def validate_data(root: Path, errors: list[str], warnings: list[str]) -> None:
     ids = [c.get("id") for c in card_list]
     if len(ids) != len(set(ids)):
         add_error(errors, "cards.yaml: kort-id:n är inte unika.")
-    decks = {}
+
+    decks: dict[str, int] = {}
     for c in card_list:
         decks[c.get("deck")] = decks.get(c.get("deck"), 0) + 1
         for key in ("id", "name", "deck", "type", "effect"):
             if not c.get(key):
                 add_error(errors, f"cards.yaml: kort saknar {key}: {c!r}")
+
     if decks.get("fynd") != 12:
         add_error(errors, f"cards.yaml: väntade 12 fyndkort, hittade {decks.get('fynd', 0)}.")
     if decks.get("hot") != 12:
@@ -173,64 +162,34 @@ def validate_data(root: Path, errors: list[str], warnings: list[str]) -> None:
         if needed not in section_titles:
             add_error(errors, f"reference-card.yaml: saknar sektion {needed!r}.")
 
-    # Några kända regelord som ska finnas i regelboken och/eller A6-underlag.
-    rulebook_text = (root / "docs/rulebook.md").read_text(encoding="utf-8")
-    for term in ("Mörker", "Nattvakt", "medtagen mat", "Fyrplatsen", "Ljuskärna"):
-        if term not in rulebook_text:
-            add_error(errors, f"Regelboken saknar viktigt begrepp: {term}")
 
+def validate_generated_dirs(root: Path, errors: list[str], warnings: list[str]) -> None:
+    for dirname in GENERATED_DIRS:
+        path = root / dirname
+        if path.exists():
+            add_warning(warnings, f"{dirname}/ finns i arbetskopian men ska inte versioneras. Den bör ligga i .gitignore.")
 
-def validate_release(root: Path, release: Path, errors: list[str], warnings: list[str]) -> None:
-    manifest_path = release / "RELEASE_MANIFEST.json"
-    if not manifest_path.exists():
-        add_error(errors, f"{release.relative_to(root)} saknar RELEASE_MANIFEST.json.")
+    gitignore = root / ".gitignore"
+    if not gitignore.exists():
+        add_error(errors, ".gitignore saknas.")
         return
+    text = gitignore.read_text(encoding="utf-8")
+    for pattern in ("output/", "release/", "dist/", "build/"):
+        if pattern not in text:
+            add_error(errors, f".gitignore saknar {pattern}")
 
-    try:
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    except json.JSONDecodeError as exc:
-        add_error(errors, f"{manifest_path.relative_to(root)} är ogiltig JSON: {exc}")
-        return
 
-    if manifest.get("release") != release.name:
-        add_error(errors, f"Manifest release={manifest.get('release')!r} matchar inte katalogen {release.name!r}.")
-
-    pdf_dir = release / "print" / "pdf"
-    svg_dir = release / "print" / "svg"
-    docs_dir = release / "docs"
-
-    for d in (pdf_dir, svg_dir, docs_dir):
-        if not d.exists():
-            add_error(errors, f"Release-katalog saknas: {d.relative_to(root)}")
-
-    if pdf_dir.exists():
-        pdfs = {p.name for p in pdf_dir.glob("*.pdf")}
-        missing = EXPECTED_PRINT_PDFS - pdfs
-        extra = pdfs - EXPECTED_PRINT_PDFS
-        if missing:
-            add_error(errors, "Release saknar print-PDF: " + ", ".join(sorted(missing)))
-        if extra:
-            add_warning(warnings, "Release har extra print-PDF: " + ", ".join(sorted(extra)))
-
-    if svg_dir.exists():
-        svgs = {p.name for p in svg_dir.glob("*.svg")}
-        missing = EXPECTED_PRINT_SVGS - svgs
-        if missing:
-            add_error(errors, "Release saknar print-SVG: " + ", ".join(sorted(missing)))
-
-    for rel in manifest.get("print_files", {}).get("pdf", []):
-        if not (release / rel).exists():
-            add_error(errors, f"Manifest pekar på saknad PDF: {release.name}/{rel}")
-    for rel in manifest.get("print_files", {}).get("svg", []):
-        if not (release / rel).exists():
-            add_error(errors, f"Manifest pekar på saknad SVG: {release.name}/{rel}")
-    for rel in manifest.get("docs", []):
-        if not (release / rel).exists():
-            add_error(errors, f"Manifest pekar på saknat dokument: {release.name}/{rel}")
-
-    rulebook_pdf = docs_dir / "rulebook.pdf"
-    if not rulebook_pdf.exists() or rulebook_pdf.stat().st_size < 10_000:
-        add_error(errors, f"Regelboks-PDF saknas eller är misstänkt liten: {rulebook_pdf.relative_to(root)}")
+def validate_build_script_smoke(root: Path, errors: list[str]) -> None:
+    # Snabb syntax-/importkontroll utan att bygga PDF.
+    for script in [
+        "scripts/build_print_and_play.py",
+        "scripts/build_rulebook_pdf.py",
+        "scripts/ci_build_print_preview.py",
+        "scripts/ci_package_release.py",
+    ]:
+        result = subprocess.run([sys.executable, "-m", "py_compile", script], cwd=root)
+        if result.returncode != 0:
+            add_error(errors, f"Python-syntaxfel i {script}")
 
 
 def main() -> int:
@@ -238,6 +197,7 @@ def main() -> int:
     parser.add_argument("root", nargs="?", default=".")
     args = parser.parse_args()
     root = Path(args.root).resolve()
+
     errors: list[str] = []
     warnings: list[str] = []
 
@@ -253,15 +213,11 @@ def main() -> int:
         if not (root / rel).exists():
             add_error(errors, f"GitHub Actions workflow saknas: {rel}")
 
-    release = latest_release(root, errors)
-    if release is not None:
-        print(f"Validerar senaste release: {release.relative_to(root)}")
-        validate_release(root, release, errors, warnings)
-
-    if not errors:
-        validate_rulebook(root, errors)
-        validate_data(root, errors, warnings)
-        validate_markdown_links(root, errors)
+    validate_rulebook(root, errors)
+    validate_data(root, errors)
+    validate_generated_dirs(root, errors, warnings)
+    validate_markdown_links(root, errors, warnings)
+    validate_build_script_smoke(root, errors)
 
     if warnings:
         print(f"\nValidering klar med {len(warnings)} varning(ar).")
@@ -269,7 +225,7 @@ def main() -> int:
         print(f"\nValidering misslyckades med {len(errors)} fel.", file=sys.stderr)
         return 1
 
-    print("\nOK: Projektet validerar.")
+    print("\nOK: Projektkällorna validerar. Release/output genereras av scripts och GitHub Actions.")
     return 0
 
 

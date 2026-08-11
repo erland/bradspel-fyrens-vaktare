@@ -71,12 +71,29 @@ python scripts/ci_package_release.py --output-dir /tmp/fyrens-vaktare-release --
 
 ## Designprincip
 
-Källor ligger i `data/`, `docs/`, `scripts/`, `templates/` och `assets/`.
+Källor ligger i:
 
-`release/vX.Y.Z/` är det som används för färdiga utskriftsfiler och releasepaket.
+- `data/`
+- `docs/`
+- `scripts/`
+- `templates/`
+- `assets/`
 
-PDF:er ska kunna byggas om deterministiskt i CI.
+Följande kataloger är genererade och ska inte versioneras:
 
+- `output/`
+- `release/`
+- `dist/`
+- `build/`
+
+Allt som ska skrivas ut byggs från källorna med:
+
+```bash
+python scripts/build_print_and_play.py --output-dir dist/print-and-play --release-name local
+```
+
+GitHub Actions använder samma script som lokal byggning. Det minskar risken för
+att CI och lokal miljö producerar olika releasefiler.
 
 ## GitHub-runner: LaTeX-beroenden
 

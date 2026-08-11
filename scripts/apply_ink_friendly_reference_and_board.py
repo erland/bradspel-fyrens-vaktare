@@ -1,22 +1,25 @@
+#!/usr/bin/env python3
+"""Ink-friendly transform för A6-referens och spelplan.
+
+Filen innehåller rena hjälpfunktioner som används av build_print_and_play.py.
+Den kan även köras lokalt med explicita in- och utvägar.
+"""
+
+from __future__ import annotations
+
+import argparse
 from pathlib import Path
-import re
 
 ROOT = Path(__file__).resolve().parents[1]
 
-A6_INPUT = ROOT / "release/v0.8.0/print/svg/reference-card-a6.svg"
-BOARD_INPUT = ROOT / "release/v0.8.0/print/svg/board-a4.svg"
-
-REF_OUT = ROOT / "output/print/reference/reference-card-a6-REGLERV4-STARTBALANS-v0.8.1-styled-inkfriendly.svg"
-REF4_OUT = ROOT / "output/print/reference/reference-card-a4-4up-REGLERV4-STARTBALANS-v0.8.1-styled-inkfriendly.svg"
-BOARD_OUT = ROOT / "output/print/board/board-a4-REGLERV4-STARTBALANS-v0.8.1-styled-inkfriendly.svg"
-PREVIEW_OUT = ROOT / "output/preview/board-a4-REGLERV4-STARTBALANS-v0.8.1-styled-inkfriendly.svg"
 
 def body_of_svg(svg_text: str) -> str:
     start = svg_text.find(">") + 1
     end = svg_text.rfind("</svg>")
     return svg_text[start:end].strip()
 
-def apply_reference_style(text: str) -> str:
+
+def apply_reference_style(text: str, label: str = "ink-friendly") -> str:
     replacements = {
         '#f2ead7': '#ffffff',
         '#f8f0df': '#fffdf8',
@@ -34,16 +37,18 @@ def apply_reference_style(text: str) -> str:
         '#c08f34': '#f6e7c9',
         '#7e6b9f': '#ece8f8',
         '#fff8eb': '#ffffff',
-        '#f8f2ff': '#ffffff'
+        '#f8f2ff': '#ffffff',
     }
     for old, new in replacements.items():
         text = text.replace(old, new)
-    text = text.replace('styled v0.7.5', 'ink-friendly v0.8.1')
+    text = text.replace('styled v0.7.5', label)
+    text = text.replace('styled v0.7.1', label)
     return text
+
 
 def build_reference_4up(a6_text: str) -> str:
     inner = body_of_svg(a6_text)
-    positions = [(10,10), (121,10), (10,164), (121,164)]
+    positions = [(10, 10), (121, 10), (10, 164), (121, 164)]
     parts = ['<svg xmlns="http://www.w3.org/2000/svg" width="210.00mm" height="297.00mm" viewBox="0 0 210.00 297.00">']
     parts.append('<rect x="0" y="0" width="210" height="297" fill="#ffffff"/>')
     for x, y in positions:
@@ -53,7 +58,8 @@ def build_reference_4up(a6_text: str) -> str:
     parts.append('</svg>')
     return "\n".join(parts)
 
-def apply_board_style(text: str) -> str:
+
+def apply_board_style(text: str, label: str = "ink-friendly") -> str:
     replacements = {
         '#f2ead7': '#ffffff',
         '#f8f0df': '#fffdf8',
@@ -71,20 +77,36 @@ def apply_board_style(text: str) -> str:
     }
     for old, new in replacements.items():
         text = text.replace(old, new)
-    text = text.replace('styled v0.7.2', 'ink-friendly v0.8.1')
+    text = text.replace('styled v0.7.2', label)
+    text = text.replace('styled v0.7.1', label)
     return text
 
-def main():
-    ref_text = apply_reference_style(A6_INPUT.read_text(encoding='utf-8'))
-    REF_OUT.parent.mkdir(parents=True, exist_ok=True)
-    REF_OUT.write_text(ref_text, encoding='utf-8')
-    REF4_OUT.write_text(build_reference_4up(ref_text), encoding='utf-8')
 
-    board_text = apply_board_style(BOARD_INPUT.read_text(encoding='utf-8'))
-    BOARD_OUT.parent.mkdir(parents=True, exist_ok=True)
-    BOARD_OUT.write_text(board_text, encoding='utf-8')
-    PREVIEW_OUT.parent.mkdir(parents=True, exist_ok=True)
-    PREVIEW_OUT.write_text(board_text, encoding='utf-8')
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--reference-in")
+    parser.add_argument("--reference-out")
+    parser.add_argument("--reference-4up-out")
+    parser.add_argument("--board-in")
+    parser.add_argument("--board-out")
+    parser.add_argument("--label", default="ink-friendly")
+    args = parser.parse_args()
 
-if __name__ == '__main__':
-    main()
+    if args.reference_in and args.reference_out:
+        ref = apply_reference_style(Path(args.reference_in).read_text(encoding="utf-8"), args.label)
+        Path(args.reference_out).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.reference_out).write_text(ref, encoding="utf-8")
+        if args.reference_4up_out:
+            Path(args.reference_4up_out).parent.mkdir(parents=True, exist_ok=True)
+            Path(args.reference_4up_out).write_text(build_reference_4up(ref), encoding="utf-8")
+
+    if args.board_in and args.board_out:
+        board = apply_board_style(Path(args.board_in).read_text(encoding="utf-8"), args.label)
+        Path(args.board_out).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.board_out).write_text(board, encoding="utf-8")
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,16 @@
+# Genererat material
+output/
+release/
+dist/
+build/
+
+# Lokala cachefiler
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Operativsystem/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
