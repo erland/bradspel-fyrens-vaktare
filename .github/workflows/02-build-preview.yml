@@ -7,7 +7,6 @@ on:
       - "data/**"
       - "docs/**"
       - "scripts/**"
-      - "release/**"
       - "assets/**"
       - "templates/**"
 
@@ -46,7 +45,7 @@ jobs:
         run: python scripts/ci_validate_project.py .
 
       - name: Build preview PDFs
-        run: python scripts/ci_build_print_preview.py --output-dir "${RUNNER_TEMP}/fyrens-vaktare-print-preview"
+        run: python scripts/ci_build_print_preview.py --output-dir "${RUNNER_TEMP}/fyrens-vaktare-print-preview" --release-name "preview-${GITHUB_SHA::7}"
 
       - name: Upload preview package
         uses: actions/upload-artifact@v4

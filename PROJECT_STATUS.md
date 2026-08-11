@@ -146,3 +146,13 @@ Genomfört:
 - Uppdaterade `.github/workflows/03-release.yml`.
 - Lade till paketet `lmodern` i apt-installationen för XeLaTeX/Pandoc.
 - Uppdaterade dokumentationen i `docs/github-actions-release-workflow.md`.
+
+## v0.8.8 – repo-cleanup
+
+Genomfört:
+- Tog bort `output/` och `release/` ur projektzipens källstruktur.
+- Lade till `.gitignore` för `output/`, `release/`, `dist/` och `build/`.
+- Lade till `scripts/build_print_and_play.py` som central generator för print-and-play-paket.
+- Uppdaterade CI så preview och release byggs från källor, inte från incheckad release-katalog.
+- Uppdaterade validering så den validerar källor och byggscript i stället för historiska release-mappar.
+- Lade till `docs/release-policy.md`.

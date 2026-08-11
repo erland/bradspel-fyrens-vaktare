@@ -917,3 +917,12 @@ Detta är första funktionella spelbrädet och ska behandlas som prototypmateria
 
 - Lade till `lmodern` i GitHub Actions för preview och release.
 - Fixar `LaTeX Error: File 'lmodern.sty' not found` vid Pandoc/XeLaTeX-bygge.
+
+## v0.8.8 – repo-cleanup
+
+- Tog bort `output/` och `release/` från projektets källzip.
+- Lade till `.gitignore` för genererade kataloger.
+- Lade till `scripts/build_print_and_play.py`.
+- Skrev om preview/release-CI så allt byggs från källor.
+- Skrev om valideringen så den inte kräver incheckad release.
+- Lade till `docs/release-policy.md`.
